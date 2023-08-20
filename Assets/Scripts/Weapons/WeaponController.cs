@@ -29,7 +29,7 @@ public class WeaponController : MonoBehaviour
         yield return new WaitForSeconds(attackLength);
         attackSprite.SetActive(false);
 
-        yield return new WaitForSeconds(attackRate);
+        yield return new WaitForSeconds(1/attackRate);
         isAttacking = false;
    }
 }

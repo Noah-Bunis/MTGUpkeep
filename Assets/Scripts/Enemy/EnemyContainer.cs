@@ -8,25 +8,39 @@ public class EnemyContainer : MonoBehaviour
     private bool isAttacking = false;
 
     Rigidbody2D rigidbody;
+    SimpleFlash flash;
+    SpriteRenderer sprite;
 
     [Header ("ENEMY ATTRIBUTES")]
-    [SerializeField] float speed;
-    [SerializeField] float health;
-    [SerializeField] float damage;
-    [SerializeField] float damageRate;
+    [SerializeField] public float speed;
+    [SerializeField] public float health;
+    [SerializeField] public float damage;
+    [SerializeField] public float damageRate;
 
     void Awake ()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        flash = GetComponent<SimpleFlash>();
+        sprite = GetComponent<SpriteRenderer>();
+        targetDestination = GameObject.Find("Player").transform;
     }
 
     void FixedUpdate()
     {
         Vector3 direction = (targetDestination.position - transform.position).normalized;
         rigidbody.velocity = direction * speed;
+
+        if (direction.x > 0) sprite.flipX = true;
+        else sprite.flipX = false;
+
+        if (health <= 0)
+        {
+            flash.Flash();
+            Destroy(gameObject, 0.1f);
+        }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<PlayerController>())
         {
@@ -41,7 +55,7 @@ public class EnemyContainer : MonoBehaviour
             isAttacking = true;
             player.health -= damage;
         }
-        yield return new WaitForSeconds(damageRate);
+        yield return new WaitForSeconds(1 / damageRate);
         if (isAttacking) isAttacking = false;
     }
 }
