@@ -39,7 +39,7 @@ public class EnemyContainer : MonoBehaviour
         if (health <= 0)
         {
             flash.Flash();
-            Destroy(gameObject, 0.1f);
+            Destroy(gameObject, flash.duration);
         }
     }
 

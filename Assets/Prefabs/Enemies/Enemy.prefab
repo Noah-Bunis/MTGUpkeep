@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9007341081162277986}
   - component: {fileID: 6379580691675851619}
   - component: {fileID: 6602476347454685806}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_ContactCaptureLayers:
     serializedVersion: 2
     m_Bits: 4294967295

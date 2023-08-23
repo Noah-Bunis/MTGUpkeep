@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9189785883822781944}
   - component: {fileID: 6547976289496473292}
   - component: {fileID: 1257712084951570230}
+  - component: {fileID: 8117062082543134739}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Untagged
@@ -145,6 +146,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   weapon: {fileID: 5272280217562749459}
+--- !u!50 &8117062082543134739
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3233851908369006659}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &5433716018114793450
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAttacking: 0
+  isProjectile: 0
   attackRate: 1
   attackLength: 0.5
   attackSprite: {fileID: 3233851908369006659}
