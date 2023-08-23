@@ -8,6 +8,12 @@ public class WeaponController : MonoBehaviour
    [SerializeField] float attackRate;
    [SerializeField] float attackLength;
    [SerializeField] GameObject attackSprite;
+   Transform player;
+
+   void Awake()
+   {
+        player = GameObject.FindWithTag("Player").transform;
+   }
 
    private void FixedUpdate()
    {
@@ -16,7 +22,11 @@ public class WeaponController : MonoBehaviour
             StartCoroutine(Attack());
         }
 
-        transform.up = transform.parent.up;
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        transform.up = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
+
+        transform.position = player.position;
    }
 
    private IEnumerator Attack()

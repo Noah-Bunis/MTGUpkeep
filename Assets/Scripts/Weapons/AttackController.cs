@@ -5,6 +5,7 @@ using UnityEngine;
 public class AttackController : MonoBehaviour
 {
     [SerializeField] public float damage;
+    [SerializeField] public WeaponController weapon;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

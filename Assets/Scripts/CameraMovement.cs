@@ -6,6 +6,11 @@ public class CameraMovement : MonoBehaviour
     public float followRadius = 5.0f;   // The desired radius between camera and player
     public float followSpeed = 5.0f;    // The speed of camera movement
 
+    void Awake()
+    {
+        player = GameObject.FindWithTag("Player").transform;
+    }
+
     private void Update()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, -10);

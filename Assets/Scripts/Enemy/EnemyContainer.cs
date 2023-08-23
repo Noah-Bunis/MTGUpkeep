@@ -17,12 +17,15 @@ public class EnemyContainer : MonoBehaviour
     [SerializeField] public float damage;
     [SerializeField] public float damageRate;
 
+
     void Awake ()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         flash = GetComponent<SimpleFlash>();
         sprite = GetComponent<SpriteRenderer>();
-        targetDestination = GameObject.Find("Player").transform;
+        targetDestination = GameObject.FindWithTag("Player").transform;
+
+        speed = Random.Range(speed * 0.75f, speed * 1.25f);
     }
 
     void FixedUpdate()
@@ -30,7 +33,7 @@ public class EnemyContainer : MonoBehaviour
         Vector3 direction = (targetDestination.position - transform.position).normalized;
         rigidbody.velocity = direction * speed;
 
-        if (direction.x > 0) sprite.flipX = true;
+        if (direction.x < 0) sprite.flipX = true;
         else sprite.flipX = false;
 
         if (health <= 0)

@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  weapon: {fileID: 5272280217562749459}
 --- !u!1 &5433716018114793450
 GameObject:
   m_ObjectHideFlags: 0

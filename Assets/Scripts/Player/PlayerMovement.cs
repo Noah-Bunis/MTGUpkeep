@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rigidbody;
+    [SerializeField] SpriteRenderer sprite;
     Vector3 movementVector = new Vector3();
     public float speed = 1.3f;
 
@@ -24,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
         Vector2 direction = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
-        transform.up = direction;
+
+        if (direction.x > 0) sprite.flipX = false;
+        else sprite.flipX = true;
     }
 }
