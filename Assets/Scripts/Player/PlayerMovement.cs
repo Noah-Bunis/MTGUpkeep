@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 direction = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
 
-        if (direction.x > 0) sprite.flipX = false;
-        else sprite.flipX = true;
+        if (movementVector.x > 0) sprite.flipX = false;
+        else if (movementVector.x < 0) sprite.flipX = true;
     }
 }
