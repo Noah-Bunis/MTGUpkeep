@@ -24,7 +24,7 @@ public class AttackController : MonoBehaviour
         if (collision.gameObject.GetComponent<EnemyContainer>())
             {
                 EnemyContainer enemy = collision.gameObject.GetComponent<EnemyContainer>();
-                enemy.health -= damage;
+                enemy.health -= (int)damage;
             }
     }
 

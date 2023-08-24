@@ -123,6 +123,7 @@ MonoBehaviour:
   targetDestination: {fileID: 0}
   speed: 0.5
   health: 10
+  healthMax: 0
   damage: 1
   damageRate: 1
 --- !u!212 &6379580691675851619

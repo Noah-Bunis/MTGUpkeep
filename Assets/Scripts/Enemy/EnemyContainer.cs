@@ -13,12 +13,13 @@ public class EnemyContainer : MonoBehaviour
 
     [Header ("ENEMY ATTRIBUTES")]
     [SerializeField] public float speed;
-    [SerializeField] public float health;
+    [SerializeField] public int health;
+    [SerializeField] public int healthMax;
     [SerializeField] public float damage;
     [SerializeField] public float damageRate;
 
 
-    void Awake ()
+    void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         flash = GetComponent<SimpleFlash>();
@@ -56,7 +57,8 @@ public class EnemyContainer : MonoBehaviour
         if (!isAttacking)
         {
             isAttacking = true;
-            player.health -= damage;
+            player.health -= (int)damage;
+            player.HealthUpdate();
         }
         yield return new WaitForSeconds(1 / damageRate);
         if (isAttacking) isAttacking = false;

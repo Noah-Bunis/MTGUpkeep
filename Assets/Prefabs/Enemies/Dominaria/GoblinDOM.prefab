@@ -123,8 +123,10 @@ MonoBehaviour:
   targetDestination: {fileID: 0}
   speed: 0.75
   health: 10
+  healthMax: 10
   damage: 1
   damageRate: 2
+  healthBar: {fileID: 0}
 --- !u!212 &6379580691675851619
 SpriteRenderer:
   m_ObjectHideFlags: 0
