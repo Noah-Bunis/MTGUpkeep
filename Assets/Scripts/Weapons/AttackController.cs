@@ -25,6 +25,7 @@ public class AttackController : MonoBehaviour
             {
                 EnemyContainer enemy = collision.gameObject.GetComponent<EnemyContainer>();
                 enemy.health -= (int)damage;
+                enemy.StartCoroutine(enemy.ShowDamage(damage));
             }
     }
 

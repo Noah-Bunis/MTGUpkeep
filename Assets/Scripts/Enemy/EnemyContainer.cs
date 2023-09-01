@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EnemyContainer : MonoBehaviour
 {
     [SerializeField] Transform targetDestination;
-    private bool isAttacking = false;
+    [SerializeField] TMP_Text damageText;
+    private bool isAttacking = false;   
 
     Rigidbody2D rigidbody;
     SimpleFlash flash;
@@ -25,7 +27,7 @@ public class EnemyContainer : MonoBehaviour
         flash = GetComponent<SimpleFlash>();
         sprite = GetComponent<SpriteRenderer>();
         targetDestination = GameObject.FindWithTag("Player").transform;
-
+        damageText.text = "";
         speed = Random.Range(speed * 0.75f, speed * 1.25f);
     }
 
@@ -52,6 +54,12 @@ public class EnemyContainer : MonoBehaviour
         }
     }
 
+    public IEnumerator ShowDamage(float damage)
+    {
+        damageText.text = damage.ToString();
+        yield return new WaitForSeconds(0.2f);
+        damageText.text = "";
+    }
     private IEnumerator Attack(PlayerController player)
     {
         if (!isAttacking)
