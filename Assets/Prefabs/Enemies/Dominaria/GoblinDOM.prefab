@@ -96,7 +96,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.005296983, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -107,7 +107,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.2}
+  m_Size: {x: 0.05252345, y: 0.2}
   m_EdgeRadius: 0
 --- !u!114 &9007341081162277986
 MonoBehaviour:
@@ -128,6 +128,7 @@ MonoBehaviour:
   healthMax: 10
   damage: 1
   damageRate: 2
+  maxEnemyGroup: 4
 --- !u!212 &6379580691675851619
 SpriteRenderer:
   m_ObjectHideFlags: 0

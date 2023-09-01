@@ -19,6 +19,7 @@ public class EnemyContainer : MonoBehaviour
     [SerializeField] public int healthMax;
     [SerializeField] public float damage;
     [SerializeField] public float damageRate;
+    [SerializeField] public int maxEnemyGroup;
 
 
     void Awake()

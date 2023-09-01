@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1696230884271300838, guid: 02ff1cc5c8f1731469cc6633aa97132d, type: 3}
-  spawnArea: {x: 2, y: 2}
-  spawnTimer: 5
+  spawnArea: {x: 4, y: 4}
+  spawnTimerMax: 3
