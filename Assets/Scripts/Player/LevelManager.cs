@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     public int level = 1;
     public int exp;
+    public int gold;
     public Slider ExpBar;
 
     public void Awake()
@@ -31,6 +32,11 @@ public class LevelManager : MonoBehaviour
     {
         exp += amount;
         CheckLevelUp();
+    }
+
+    public void AddGold(int amount)
+    {
+        gold += amount;
     }
 
     private void CheckLevelUp()

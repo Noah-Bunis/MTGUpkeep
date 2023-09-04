@@ -7,7 +7,9 @@ public class EnemyContainer : MonoBehaviour
 {
     [SerializeField] Transform targetDestination;
     [SerializeField] TMP_Text damageText;
+    [SerializeField] GameObject expDrop;
     private bool isAttacking = false;   
+    private bool isDying = false;
 
     Rigidbody2D rigidbody;
     SimpleFlash flash;
@@ -40,10 +42,13 @@ public class EnemyContainer : MonoBehaviour
         if (direction.x < 0) sprite.flipX = true;
         else sprite.flipX = false;
 
-        if (health <= 0)
+        if (health <= 0 && !isDying)
         {
+            isDying = true;
             flash.Flash();
             Destroy(gameObject, flash.duration);
+            GameObject exp = Instantiate(expDrop);
+            exp.transform.position = transform.position;
         }
     }
 

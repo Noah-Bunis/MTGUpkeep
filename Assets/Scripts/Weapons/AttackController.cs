@@ -28,13 +28,11 @@ public class AttackController : MonoBehaviour
                 {
                     enemy.health -= (int)(damage * player.critDamageMultiplier);
                     enemy.StartCoroutine(enemy.ShowDamage((int)(damage * player.critDamageMultiplier)));
-                    player.GetComponent<LevelManager>().AddEXP(10);
                 }
                 else 
                 {
                     enemy.health -= (int)damage;
                     enemy.StartCoroutine(enemy.ShowDamage((int)damage));
-                    player.GetComponent<LevelManager>().AddEXP(10);
                 }
                 
             }

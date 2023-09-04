@@ -296,6 +296,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   exp: 0
+  gold: 0
+  ExpBar: {fileID: 0}
 --- !u!1 &8355111148281090689
 GameObject:
   m_ObjectHideFlags: 0
