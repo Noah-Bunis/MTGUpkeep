@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 4136057579193660579}
   - component: {fileID: 5760862356422879682}
   - component: {fileID: 3435669286464672698}
+  - component: {fileID: 4311023790932647701}
   m_Layer: 3
   m_Name: Jace
   m_TagString: Player
@@ -253,12 +254,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   healthMax: 50
-  level: 0
-  expTotal: 0
-  expGain: 1
-  crit: 3
+  critRate: 25
+  critDamageMultiplier: 1.3
   pickupRange: 5
-  damage: 1
+  damage: 0.8
   movement: {fileID: 1034309164571544709}
   healthBar: {fileID: 2266808041813724205}
   timer: 3
@@ -283,6 +282,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4311023790932647701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7914255728683625322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 388a618b8a2ba9d41957a14cbb228fe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
+  exp: 0
 --- !u!1 &8355111148281090689
 GameObject:
   m_ObjectHideFlags: 0

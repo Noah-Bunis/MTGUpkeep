@@ -7,10 +7,8 @@ public class PlayerController : MonoBehaviour
     [Header("PLAYER ATTRIBUTES")]
     [SerializeField] public int health;
     [SerializeField] public int healthMax;
-    [SerializeField] public int level;
-    [SerializeField] public float expTotal;
-    [SerializeField] public float expGain;
-    [SerializeField] public float crit;
+    [SerializeField] public float critRate;
+    [SerializeField] public float critDamageMultiplier;
     [SerializeField] public float pickupRange;
     [SerializeField] public float damage;
 

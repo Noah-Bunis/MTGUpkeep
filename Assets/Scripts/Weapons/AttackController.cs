@@ -24,13 +24,30 @@ public class AttackController : MonoBehaviour
         if (collision.gameObject.GetComponent<EnemyContainer>())
             {
                 EnemyContainer enemy = collision.gameObject.GetComponent<EnemyContainer>();
-                enemy.health -= (int)damage;
-                enemy.StartCoroutine(enemy.ShowDamage(damage));
+                if (isCrit()) 
+                {
+                    enemy.health -= (int)(damage * player.critDamageMultiplier);
+                    enemy.StartCoroutine(enemy.ShowDamage((int)(damage * player.critDamageMultiplier)));
+                    player.GetComponent<LevelManager>().AddEXP(10);
+                }
+                else 
+                {
+                    enemy.health -= (int)damage;
+                    enemy.StartCoroutine(enemy.ShowDamage((int)damage));
+                    player.GetComponent<LevelManager>().AddEXP(10);
+                }
+                
             }
     }
 
     public void Decay(float time)
     {
         Destroy(gameObject, time);
+    }
+
+    private bool isCrit()
+    {
+        if (Random.Range(0, 100) <= player.critRate) return true;
+        else return false;
     }
 }
