@@ -2,29 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
     public int level = 1;
     public int exp;
     public int gold;
-    public Slider ExpBar;
+    public GameObject ExpBar;
+    [SerializeField] public GameObject upgradeMenu;
 
     public void Awake()
     {
-        ExpBar = GameObject.FindWithTag("ExpBar").GetComponent<Slider>();
+        ExpBar = GameObject.FindWithTag("ExpBar");
     }
 
-    public void FixedUpdate()
+    public void Update()
     {
-        ExpBar.value = exp;
-        ExpBar.maxValue = TO_LEVEL_UP;
+        ExpBar.GetComponent<Slider>().value = exp;
+        ExpBar.GetComponent<Slider>().maxValue = TO_LEVEL_UP;
+        ExpBar.GetComponent<TMP_Text>().text = "Level " + level;
     }
     public int TO_LEVEL_UP
     {
         get
         {
-            return level * 1000;
+            return level * 100;
         }
     }
 
@@ -45,6 +48,14 @@ public class LevelManager : MonoBehaviour
         {
             exp -= TO_LEVEL_UP;
             level += 1;
+            LevelUp();
         }
+    }
+
+    private void LevelUp()
+    {
+        
+        Time.timeScale = 0;
+        upgradeMenu.SetActive(true);
     }
 }

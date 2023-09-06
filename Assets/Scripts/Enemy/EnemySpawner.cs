@@ -11,7 +11,7 @@ public class EnemySpawner: MonoBehaviour {
   float spawnTimer;
   float gameTimer = 60;
 
-  private void Update() {
+  private void FixedUpdate() {
     maxEnemyGroup = enemy.GetComponent<EnemyContainer>().maxEnemyGroup;
     spawnTimer -= Time.deltaTime;
     gameTimer -= Time.deltaTime;

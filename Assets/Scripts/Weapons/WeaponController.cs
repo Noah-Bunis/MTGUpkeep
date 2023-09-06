@@ -17,7 +17,7 @@ public class WeaponController : MonoBehaviour
     transform.position = player.position;
   }
 
-  private void Update()
+  private void FixedUpdate()
   {
 
     Vector3 mousePosition = Input.mousePosition;
