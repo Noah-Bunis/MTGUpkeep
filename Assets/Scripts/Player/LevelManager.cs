@@ -9,19 +9,21 @@ public class LevelManager : MonoBehaviour
     public int level = 1;
     public int exp;
     public int gold;
-    public GameObject ExpBar;
+    public GameObject expBar;
+    public Text levelText;
     [SerializeField] public GameObject upgradeMenu;
 
     public void Awake()
     {
-        ExpBar = GameObject.FindWithTag("ExpBar");
+        expBar = GameObject.FindWithTag("ExpBar");
+        levelText = GameObject.Find("LevelText").GetComponent<Text>();
     }
 
     public void Update()
     {
-        ExpBar.GetComponent<Slider>().value = exp;
-        ExpBar.GetComponent<Slider>().maxValue = TO_LEVEL_UP;
-        ExpBar.GetComponent<TMP_Text>().text = "Level " + level;
+        expBar.GetComponent<Slider>().value = exp;
+        expBar.GetComponent<Slider>().maxValue = TO_LEVEL_UP;
+        levelText.text = "Level " + level;
     }
     public int TO_LEVEL_UP
     {

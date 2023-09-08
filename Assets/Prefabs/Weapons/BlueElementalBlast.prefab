@@ -227,7 +227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 123e365344293e443b3f301817e94ce8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 10
   weapon: {fileID: 5272280217562749459}
 --- !u!50 &8608121140975878517
 Rigidbody2D:
@@ -301,7 +300,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 509d81a9d68167a4985e3bd2c928e9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardName: 
   isProjectile: 1
   attackRate: 1
   attackLength: 0.25
+  baseDamage: 10
   attackSprite: {fileID: 3233851908369006659}

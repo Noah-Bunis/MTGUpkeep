@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AttackController : MonoBehaviour
 {
-    [SerializeField] public float baseDamage;
     [SerializeField] public WeaponController weapon;
     private float damage;
     PlayerController player;
@@ -16,7 +15,7 @@ public class AttackController : MonoBehaviour
 
     void FixedUpdate()
     {
-        damage = player.damage * baseDamage;
+        damage = player.damage * weapon.baseDamage;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -5,9 +5,12 @@ using UnityEngine;
 public class WeaponController : MonoBehaviour
 {
   float timer;
+  int level = 1;
+  [SerializeField] string cardName;
   [SerializeField] bool isProjectile;
   [SerializeField] float attackRate;
   [SerializeField] float attackLength;
+  [SerializeField] public float baseDamage;
   [SerializeField] GameObject attackSprite;
   Transform player;
 
@@ -15,6 +18,17 @@ public class WeaponController : MonoBehaviour
   {
     player = GameObject.FindWithTag("Player").transform;
     transform.position = player.position;
+  }
+
+  public void LevelUp()
+  {
+    if (level < 7)
+    {
+      level++;
+      attackRate *= 1.2f;
+      attackLength *= 1.2f;
+      baseDamage *= 1.2f;
+    }
   }
 
   private void FixedUpdate()

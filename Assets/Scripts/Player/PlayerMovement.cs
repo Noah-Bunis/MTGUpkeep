@@ -8,10 +8,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] SpriteRenderer sprite;
     Animator animator;
     Vector3 movementVector = new Vector3();
-    public float speed = 1.3f;
+    float speed;
 
     void Awake()
     {
+        speed = GetComponent<PlayerController>().speed;
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }

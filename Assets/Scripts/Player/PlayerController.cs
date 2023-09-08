@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public float critDamageMultiplier;
     [SerializeField] public float pickupRange;
     [SerializeField] public float damage;
+    [SerializeField] public float speed;
 
     [Header("OBJECT REFRENCES")]
     [SerializeField] PlayerMovement movement;

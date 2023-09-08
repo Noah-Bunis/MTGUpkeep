@@ -258,6 +258,7 @@ MonoBehaviour:
   critDamageMultiplier: 1.3
   pickupRange: 5
   damage: 0.8
+  speed: 1
   movement: {fileID: 1034309164571544709}
   healthBar: {fileID: 2266808041813724205}
   timer: 3

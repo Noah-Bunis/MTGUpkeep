@@ -62,9 +62,12 @@ public class EnemyContainer : MonoBehaviour
 
     public IEnumerator ShowDamage(float damage)
     {
-        damageText.text = damage.ToString();
-        yield return new WaitForSeconds(0.2f);
-        damageText.text = "";
+        if (damage != 0)
+        {
+            damageText.text = damage.ToString();
+            yield return new WaitForSeconds(0.2f);
+            damageText.text = "";
+        }
     }
     private IEnumerator Attack(PlayerController player)
     {
