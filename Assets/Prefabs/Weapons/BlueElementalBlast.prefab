@@ -306,3 +306,4 @@ MonoBehaviour:
   attackLength: 0.25
   baseDamage: 10
   attackSprite: {fileID: 3233851908369006659}
+  maxLevel: 20

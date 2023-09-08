@@ -12,6 +12,7 @@ public class WeaponController : MonoBehaviour
   [SerializeField] float attackLength;
   [SerializeField] public float baseDamage;
   [SerializeField] GameObject attackSprite;
+  [SerializeField] public int maxLevel;
   Transform player;
 
   void Awake()
@@ -22,7 +23,7 @@ public class WeaponController : MonoBehaviour
 
   public void LevelUp()
   {
-    if (level < 7)
+    if (level < maxLevel)
     {
       level++;
       attackRate *= 1.2f;

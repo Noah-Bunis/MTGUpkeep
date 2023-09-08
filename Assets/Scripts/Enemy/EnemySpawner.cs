@@ -7,9 +7,9 @@ public class EnemySpawner: MonoBehaviour {
   [SerializeField] Vector2 spawnArea;
   [SerializeField] float spawnTimerMax;
   float maxEnemyGroup = 4;
-  float spawnTimerMin = 0.5f;
+  float spawnTimerMin = 0.1f;
   float spawnTimer;
-  float gameTimer = 60;
+  public float gameTimer = 60;
 
   private void FixedUpdate() {
     maxEnemyGroup = enemy.GetComponent<EnemyContainer>().maxEnemyGroup;
