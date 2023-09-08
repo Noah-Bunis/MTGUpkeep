@@ -62,6 +62,7 @@ public class EnemyContainer : MonoBehaviour
 
     public IEnumerator ShowDamage(float damage)
     {
+        flash.Flash();
         if (damage != 0)
         {
             damageText.text = damage.ToString();

@@ -14,7 +14,7 @@ public class CameraMovement : MonoBehaviour
 
     private void Update()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+        transform.position = new Vector3(transform.position.x, transform.position.y, -20);
         if (player == null)
         {
             Debug.LogWarning("Player reference is missing!");

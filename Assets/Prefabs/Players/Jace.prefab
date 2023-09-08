@@ -167,7 +167,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 6078265753672589615}
-  speed: 1
 --- !u!50 &534968345021384505
 Rigidbody2D:
   serializedVersion: 4
@@ -298,8 +297,10 @@ MonoBehaviour:
   level: 1
   exp: 0
   gold: 0
-  ExpBar: {fileID: 0}
+  expBar: {fileID: 0}
+  levelText: {fileID: 0}
   upgradeMenu: {fileID: 0}
+  levelUpParticles: {fileID: 7389303063477709544, guid: b540c9c63fca68b42b226b8ca4088294, type: 3}
 --- !u!1 &8355111148281090689
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8485507221087755128, guid: 537304e5046caa2489fa5a425cd8c170, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2
+      value: -0.251
       objectReference: {fileID: 0}
     - target: {fileID: 8485507221087755128, guid: 537304e5046caa2489fa5a425cd8c170, type: 3}
       propertyPath: m_LocalPosition.z

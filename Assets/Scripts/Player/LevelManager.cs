@@ -56,7 +56,6 @@ public class LevelManager : MonoBehaviour
 
     private void LevelUp()
     {
-        
         Time.timeScale = 0;
         upgradeMenu.SetActive(true);
     }

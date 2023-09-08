@@ -6,6 +6,7 @@ public class UpgradeManager : MonoBehaviour
 {
     public GameObject player;
     public string cardName;
+    [SerializeField] public GameObject levelUpParticles;
     
     void Awake()
     {
@@ -28,6 +29,7 @@ public class UpgradeManager : MonoBehaviour
         }
 
         Time.timeScale = 1;
+        Instantiate(levelUpParticles, player.transform);
         gameObject.SetActive(false);
     }
 
