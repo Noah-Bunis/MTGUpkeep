@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: BlueElementalBlast
+  weapon: {fileID: 5433716018114793450, guid: 8a6e62de08d1c4445bf1f27456af487a, type: 3}
 --- !u!1 &1544681580291362238
 GameObject:
   m_ObjectHideFlags: 0

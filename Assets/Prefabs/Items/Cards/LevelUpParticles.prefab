@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4291018622493281823}
   - component: {fileID: 8141919746155503305}
   - component: {fileID: 3669357513919838382}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: LevelUpParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7389303063477709544}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -9}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -981,7 +981,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 256
+        scalar: 512
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -3678,11 +3678,11 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 4
-    type: 0
-    collisionMode: 0
-    colliderForce: 0
+    type: 1
+    collisionMode: 1
+    colliderForce: 192
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
@@ -3851,8 +3851,8 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
-    maxCollisionShapes: 256
+      m_Bits: 64
+    maxCollisionShapes: 512
     quality: 0
     voxelSize: 0.5
     collisionMessages: 0

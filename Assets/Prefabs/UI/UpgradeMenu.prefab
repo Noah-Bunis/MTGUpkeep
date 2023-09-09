@@ -410,6 +410,9 @@ MonoBehaviour:
   player: {fileID: 0}
   cardName: 
   levelUpParticles: {fileID: 7389303063477709544, guid: b540c9c63fca68b42b226b8ca4088294, type: 3}
+  cards:
+  - {fileID: 1373150080372407184, guid: f2062d31355bcd44ba699ad7385f66b1, type: 3}
+  - {fileID: 1373150080372407184, guid: ae7a60d52a39d194896b905af15382a0, type: 3}
 --- !u!1001 &3007053788163204067
 PrefabInstance:
   m_ObjectHideFlags: 0

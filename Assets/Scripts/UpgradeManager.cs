@@ -7,6 +7,8 @@ public class UpgradeManager : MonoBehaviour
     public GameObject player;
     public string cardName;
     [SerializeField] public GameObject levelUpParticles;
+
+    [SerializeField] public GameObject[] cards;
     
     void Awake()
     {
@@ -35,10 +37,15 @@ public class UpgradeManager : MonoBehaviour
 
     void UpgradeWeapon()
     {
-        WeaponController weapon = player.transform.Find("--EQUIPPED ITEMS--").Find(cardName).GetComponent<WeaponController>();
-        if (weapon != null)
+        GameObject weapon = GameObject.Find(cardName);
+        if (weapon.GetComponent<WeaponController>() != null)
         {
-            weapon.LevelUp();
+            weapon.GetComponent<WeaponController>().LevelUp();
+        }
+        else
+        {
+            GameObject newWeapon = Instantiate(GetCard(cardName).GetComponent<CardButton>().weapon, player.transform.Find("EQUIPPEDITEMS").transform);
+            newWeapon.name = cardName;
         }
     }
 
@@ -54,5 +61,17 @@ public class UpgradeManager : MonoBehaviour
                 attributes.speed *= amount;
                 break;
         }
+    }
+
+    GameObject GetCard(string cardName)
+    {
+        for (int i = 0; i < cards.Length; i++)
+        {
+            if (cards[i].name == cardName) 
+            {
+                return cards[i];
+            }
+        }
+        return null;
     }
 }

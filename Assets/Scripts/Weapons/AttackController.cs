@@ -16,9 +16,10 @@ public class AttackController : MonoBehaviour
     void FixedUpdate()
     {
         damage = player.damage * weapon.baseDamage;
+        if (weapon.followPlayer) transform.position = player.transform.position;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<EnemyContainer>())
             {

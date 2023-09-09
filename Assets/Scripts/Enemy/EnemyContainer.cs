@@ -31,7 +31,7 @@ public class EnemyContainer : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         targetDestination = GameObject.FindWithTag("Player").transform;
         damageText.text = "";
-        speed = Random.Range(speed * 0.75f, speed * 1.25f);
+        speed = Random.Range(speed * 0.9f, speed * 1.25f);
     }
 
     void FixedUpdate()

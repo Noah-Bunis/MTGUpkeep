@@ -9,11 +9,18 @@ public class ItemManager : MonoBehaviour
     [SerializeField] BoxCollider2D collider;
 
     PlayerController player;
+    float timer = 10f;
 
     void Awake()
     {
         player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         collider.size *= player.pickupRange;
+    }
+
+    void FixedUpdate()
+    {
+        timer -= Time.deltaTime;
+        if (timer <= 0f) Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

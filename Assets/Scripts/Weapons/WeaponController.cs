@@ -6,13 +6,13 @@ public class WeaponController : MonoBehaviour
 {
   float timer;
   int level = 1;
-  [SerializeField] string cardName;
-  [SerializeField] bool isProjectile;
   [SerializeField] float attackRate;
   [SerializeField] float attackLength;
+  [SerializeField] float attackVelocity;
   [SerializeField] public float baseDamage;
   [SerializeField] GameObject attackSprite;
   [SerializeField] public int maxLevel;
+  [SerializeField] public bool followPlayer;
   Transform player;
 
   void Awake()
@@ -50,15 +50,10 @@ public class WeaponController : MonoBehaviour
 
     private void Attack()
     {
-      if (isProjectile)
-      {
         GameObject projectile = Instantiate(attackSprite, transform.position, transform.rotation);
         projectile.SetActive(true);
-        projectile.GetComponent<Rigidbody2D>().velocity = transform.TransformDirection(Vector3.up * 3);
+        projectile.GetComponent<Rigidbody2D>().velocity = transform.TransformDirection(Vector3.up * attackVelocity);
         projectile.GetComponent<AttackController>().Decay(attackLength);
-      }
-      else attackSprite.SetActive(true);
-
-      timer = 1 / attackRate;
+        timer = 1 / attackRate;
     }
 }

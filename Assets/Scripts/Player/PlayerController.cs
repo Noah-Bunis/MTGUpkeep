@@ -20,6 +20,10 @@ public class PlayerController : MonoBehaviour
     private bool healthUpdate = false;
     public float timer = 2;
 
+    void Awake()
+    {
+        Application.targetFrameRate = Screen.currentResolution.refreshRate;
+    }
     void FixedUpdate()
     {
         if (healthBar.activeSelf) healthBar.GetComponent<HealthBar>().SetState(health, healthMax);
