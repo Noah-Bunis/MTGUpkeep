@@ -306,3 +306,11 @@ MonoBehaviour:
   baseDamage: 10
   attackSprite: {fileID: 3233851908369006659}
   maxLevel: 20
+  followPlayer: 0
+  forwardOffset: 0
+  levelUpgrades:
+  - rate
+  - velocity
+  - damage
+  - rate
+  - length

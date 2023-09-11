@@ -7,6 +7,7 @@ public class AttackController : MonoBehaviour
     [SerializeField] public WeaponController weapon;
     private float damage;
     PlayerController player;
+    private float timer;
 
     void Awake()
     {
@@ -16,7 +17,7 @@ public class AttackController : MonoBehaviour
     void FixedUpdate()
     {
         damage = player.damage * weapon.baseDamage;
-        if (weapon.followPlayer) transform.position = player.transform.position;
+        if (weapon.followPlayer) transform.position = (weapon.transform.position + (weapon.transform.up * weapon.forwardOffset));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -34,7 +35,6 @@ public class AttackController : MonoBehaviour
                     enemy.health -= (int)damage;
                     enemy.StartCoroutine(enemy.ShowDamage((int)damage));
                 }
-                
             }
     }
 
