@@ -25,16 +25,7 @@ public class AttackController : MonoBehaviour
         if (collision.gameObject.GetComponent<EnemyContainer>())
             {
                 EnemyContainer enemy = collision.gameObject.GetComponent<EnemyContainer>();
-                if (isCrit()) 
-                {
-                    enemy.health -= (int)(damage * player.critDamageMultiplier);
-                    enemy.StartCoroutine(enemy.ShowDamage((int)(damage * player.critDamageMultiplier)));
-                }
-                else 
-                {
-                    enemy.health -= (int)damage;
-                    enemy.StartCoroutine(enemy.ShowDamage((int)damage));
-                }
+                ApplyDamage(enemy);
             }
     }
 
@@ -47,5 +38,19 @@ public class AttackController : MonoBehaviour
     {
         if (Random.Range(0, 100) <= player.critRate) return true;
         else return false;
+    }
+
+    public void ApplyDamage(EnemyContainer enemy)
+    {
+        if (isCrit()) 
+                {
+                    enemy.health -= (int)(damage * player.critDamageMultiplier);
+                    enemy.StartCoroutine(enemy.ShowDamage((int)(damage * player.critDamageMultiplier)));
+                }
+                else 
+                {
+                    enemy.health -= (int)damage;
+                    enemy.StartCoroutine(enemy.ShowDamage((int)damage));
+                }
     }
 }

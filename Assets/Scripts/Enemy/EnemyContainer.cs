@@ -8,7 +8,8 @@ public class EnemyContainer : MonoBehaviour
     [SerializeField] Transform targetDestination;
     [SerializeField] TMP_Text damageText;
     [SerializeField] GameObject expDrop;
-    private bool isAttacking = false;   
+    private bool isAttacking = false;
+    private bool isTakingDamage = false;   
     private bool isDying = false;
 
     Rigidbody2D rigidbody;
@@ -58,6 +59,11 @@ public class EnemyContainer : MonoBehaviour
         {
             if (!isAttacking) StartCoroutine(Attack(collision.gameObject.GetComponent<PlayerController>()));
         }
+
+        else if (collision.gameObject.GetComponent<AttackController>())
+        {
+            if (!isTakingDamage) StartCoroutine(DamageOverTime(collision.gameObject.GetComponent<AttackController>()));
+        }
     }
 
     public IEnumerator ShowDamage(float damage)
@@ -80,5 +86,16 @@ public class EnemyContainer : MonoBehaviour
         }
         yield return new WaitForSeconds(1 / damageRate);
         if (isAttacking) isAttacking = false;
+    }
+
+    private IEnumerator DamageOverTime(AttackController attack)
+    {
+        if (!isTakingDamage)
+        {
+            isTakingDamage = true;
+            attack.ApplyDamage(this);
+        }
+        yield return new WaitForSeconds(1 / attack.weapon.attackRate);
+        if (isTakingDamage) isTakingDamage = false;
     }
 }

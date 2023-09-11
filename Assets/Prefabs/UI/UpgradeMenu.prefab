@@ -413,6 +413,7 @@ MonoBehaviour:
   cards:
   - {fileID: 1373150080372407184, guid: f2062d31355bcd44ba699ad7385f66b1, type: 3}
   - {fileID: 1373150080372407184, guid: ae7a60d52a39d194896b905af15382a0, type: 3}
+  - {fileID: 1373150080372407184, guid: 79a5a8998bcb0554cbb0acf551b2043b, type: 3}
 --- !u!1001 &3007053788163204067
 PrefabInstance:
   m_ObjectHideFlags: 0

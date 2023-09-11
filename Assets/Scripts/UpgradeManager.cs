@@ -22,7 +22,7 @@ public class UpgradeManager : MonoBehaviour
         {
             case null:
                 break;
-            case "BlueElementalBlast":
+            case "BlueElementalBlast": case "Incinerate":
                 UpgradeWeapon();
                 break;
             case "LightningGreaves":
