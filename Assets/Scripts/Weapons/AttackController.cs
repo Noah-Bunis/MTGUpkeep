@@ -20,14 +20,6 @@ public class AttackController : MonoBehaviour
         if (weapon.followPlayer) transform.position = (weapon.transform.position + (weapon.transform.up * weapon.forwardOffset));
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.GetComponent<EnemyContainer>())
-            {
-                EnemyContainer enemy = collision.gameObject.GetComponent<EnemyContainer>();
-                ApplyDamage(enemy);
-            }
-    }
 
     public void Decay(float time)
     {

@@ -8,7 +8,7 @@ public class WorldScrolling : MonoBehaviour
     Vector2Int currentTilePosition = new Vector2Int(0,0);
     [SerializeField] Vector2Int playerTilePosition;
     Vector2Int onTileGridPlayerPosition;
-    [SerializeField] float tileSize = 10f;
+    [SerializeField] float tileSize = 4f;
     GameObject[,] terrainTiles;
 
     [SerializeField] int terrainTileHorizontalCount, terrainTileVerticalCount;

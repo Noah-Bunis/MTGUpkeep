@@ -8,6 +8,7 @@ public class EnemyContainer : MonoBehaviour
     [SerializeField] Transform targetDestination;
     [SerializeField] TMP_Text damageText;
     [SerializeField] GameObject expDrop;
+    [SerializeField] int expDropYield;
     private bool isAttacking = false;
     private bool isTakingDamage = false;   
     private bool isDying = false;
@@ -50,6 +51,7 @@ public class EnemyContainer : MonoBehaviour
             Destroy(gameObject, flash.duration);
             GameObject exp = Instantiate(expDrop);
             exp.transform.position = transform.position;
+            exp.GetComponent<ItemManager>().expYield = expDropYield;
         }
     }
 
@@ -95,7 +97,7 @@ public class EnemyContainer : MonoBehaviour
             isTakingDamage = true;
             attack.ApplyDamage(this);
         }
-        yield return new WaitForSeconds(1 / attack.weapon.attackRate);
+        yield return new WaitForSeconds(1 / (attack.weapon.attackRate * 2));
         if (isTakingDamage) isTakingDamage = false;
     }
 }

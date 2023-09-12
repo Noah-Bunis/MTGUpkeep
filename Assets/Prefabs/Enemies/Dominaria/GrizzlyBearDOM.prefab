@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6602476347454685806}
   - component: {fileID: 5643677526521977152}
   m_Layer: 6
-  m_Name: GoblinDOM
+  m_Name: GrizzlyBearDOM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1696230884271300838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4168539054062522083}
@@ -97,18 +97,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.008121401, y: -0.006859258}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.07915366, y: 0.30087194}
+  m_Size: {x: 0.56, y: 0.51}
   m_EdgeRadius: 0
 --- !u!114 &9007341081162277986
 MonoBehaviour:
@@ -124,14 +124,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetDestination: {fileID: 0}
   damageText: {fileID: 8393628075252482346}
-  expDrop: {fileID: 7585809110396185465, guid: 3a7afef2882becb4db65584d169c282c, type: 3}
-  expDropYield: 10
-  speed: 0.75
-  health: 10
-  healthMax: 10
-  damage: 1
+  expDrop: {fileID: 7585809110396185465, guid: c3dd528531f20b443a93cf7710c2a3a7, type: 3}
+  expDropYield: 20
+  speed: 0.6
+  health: 20
+  healthMax: 20
+  damage: 2
   damageRate: 2
-  maxEnemyGroup: 4
+  maxEnemyGroup: 1
 --- !u!212 &6379580691675851619
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -173,7 +173,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1561213099, guid: c1fb11ebf1891ee4fbf594df16248d2e, type: 3}
+  m_Sprite: {fileID: 1360422376, guid: 6f23696a3203c204da38acb6c8485424, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -208,7 +208,7 @@ Animator:
   m_GameObject: {fileID: 1696230884271300838}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fbcb3d5b71c44bb4d8605101be5aa3a5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0797b7f689258f245b7daa479cde01e0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -289,11 +289,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1838575374669039342, guid: 41d275824c6198149b29ba0f2d071ef6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -0.0101
       objectReference: {fileID: 0}
     - target: {fileID: 1838575374669039342, guid: 41d275824c6198149b29ba0f2d071ef6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.2
+      value: 0.3122
       objectReference: {fileID: 0}
     - target: {fileID: 1838575374669039342, guid: 41d275824c6198149b29ba0f2d071ef6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

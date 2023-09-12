@@ -332,7 +332,7 @@ MonoBehaviour:
   forwardOffset: 0.3
   levelUpgrades:
   - damage
-  - damage
   - rate
-  - length
+  - rate
+  - damage
   - length

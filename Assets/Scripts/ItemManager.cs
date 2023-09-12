@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
-    [SerializeField] int expYield;
+    [SerializeField] public int expYield;
     [SerializeField] int goldYield;
     [SerializeField] BoxCollider2D collider;
 
