@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class CardButton : MonoBehaviour
 {
-    UpgradeManager upgrade;
-    [SerializeField] string cardName;
-    [SerializeField] public GameObject weapon;
+        UpgradeManager upgrade;
+        [SerializeField] string cardName;
+        [SerializeField] public GameObject weapon;
 
-    void Awake()
-    {
-        upgrade = GameObject.Find("UpgradeMenu").GetComponent<UpgradeManager>();
-    }
+        void Awake()
+        {
+                upgrade = GameObject.Find("UpgradeMenu").GetComponent<UpgradeManager>();
+        }
 
-    public void SelectCard()
-    {
-        upgrade.SelectCard(cardName);
-    }
+        public void SelectCard()
+        {
+                upgrade.SelectCard(cardName);
+        }
 }
