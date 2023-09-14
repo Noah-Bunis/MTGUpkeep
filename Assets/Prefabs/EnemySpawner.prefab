@@ -49,7 +49,8 @@ MonoBehaviour:
   spawnArea: {x: 4, y: 4}
   spawnTimerMax: 3
   pattern: {fileID: 8570682237670334811}
-  gameTimer: 0
+  player: {fileID: 0}
+  gameTimer: 60
 --- !u!114 &8570682237670334811
 MonoBehaviour:
   m_ObjectHideFlags: 0
