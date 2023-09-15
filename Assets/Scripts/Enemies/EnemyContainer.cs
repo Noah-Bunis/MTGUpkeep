@@ -37,8 +37,8 @@ public class EnemyContainer: MonoBehaviour {
                 Vector3 direction = (targetDestination.position - transform.position).normalized;
                 rigidbody.velocity = direction * speed;
 
-                if (direction.x < 0) sprite.flipX = true;
-                else sprite.flipX = false;
+                if (direction.x < 0) transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+                else transform.rotation = Quaternion.Euler(0f, 0f, 0f);
 
                 if (health <= 0 && !isDying) {
                         isDying = true;
