@@ -37,14 +37,15 @@ public class EnemySpawner: MonoBehaviour {
 	}
 
 	private void SpawnEnemy() {
-		Vector3 position = RandomPosition();
 		for (int i = 0; i < enemies.Length; i++)
 		{
 			maxEnemyGroup = enemies[i].GetComponent<EnemyContainer>().maxEnemyGroup;
 			for (int j = 0; j < (Random.Range(0, maxEnemyGroup)); j++)
 			{
+				Vector3 position = RandomPosition();
 				GameObject newEnemy = Instantiate(enemies[i]);
 				newEnemy.transform.position = position + new Vector3(Random.Range(-1,1), Random.Range(-1,1), 0f);
+				newEnemy.GetComponent<EnemyContainer>().player = player;
 			}
 		}
 	}
@@ -53,12 +54,12 @@ public class EnemySpawner: MonoBehaviour {
 	{	
 		bool searching = true;
 		Vector3 tempPosition = new Vector3(-spawnArea.x, spawnArea.y, 0f);
-		for (int i = 0; i < 100 && searching; i++)
+		for (int i = 0; i < 4 && searching; i++)
 		{
 			tempPosition = new Vector3(Random.Range(-spawnArea.x + transform.position.x, spawnArea.x + transform.position.x),
 			Random.Range(-spawnArea.y + transform.position.y, spawnArea.y + transform.position.y), 0f);
-			if (Mathf.Abs(tempPosition.x) - Mathf.Abs(player.transform.position.x) >= 1
-			 && Mathf.Abs(tempPosition.y) - Mathf.Abs(player.transform.position.y) >= 1)
+			if (Mathf.Abs(Mathf.Abs(tempPosition.x) - Mathf.Abs(player.transform.position.x)) >= 1
+			 && Mathf.Abs(Mathf.Abs(tempPosition.y) - Mathf.Abs(player.transform.position.y)) >= 1)
 			{
 				searching = false;
 			}

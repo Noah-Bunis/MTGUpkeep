@@ -1,8 +1,8 @@
-        using System.Collections;
-        using System.Collections.Generic;
-        using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-        public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
         {
                 new Rigidbody2D rigidbody;
                 [SerializeField] SpriteRenderer sprite;

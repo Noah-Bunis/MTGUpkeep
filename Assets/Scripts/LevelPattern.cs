@@ -22,10 +22,12 @@ public class LevelPattern: MonoBehaviour {
                         break;
                 case 0.5f:
                 case 1.5f:
+                        temp = enemies[0..(Mathf.CeilToInt(level))];
+                        break;
                 case 2.5f:
                 case 3.5f:
                 case 4.5f:
-                        temp = enemies[0..(Mathf.CeilToInt(level))];
+                        temp = enemies[1..(Mathf.CeilToInt(level))];
                         break;
                 }
                 spawner.enemies = temp;

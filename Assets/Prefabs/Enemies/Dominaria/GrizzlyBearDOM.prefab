@@ -125,12 +125,13 @@ MonoBehaviour:
   targetDestination: {fileID: 0}
   damageText: {fileID: 8393628075252482346}
   expDrop: {fileID: 7585809110396185465, guid: c3dd528531f20b443a93cf7710c2a3a7, type: 3}
+  player: {fileID: 0}
   expDropYield: 20
-  speed: 0.6
+  speed: 0.9
   health: 20
   healthMax: 20
   damage: 2
-  damageRate: 2
+  damageRate: 4
   maxEnemyGroup: 1
 --- !u!212 &6379580691675851619
 SpriteRenderer:

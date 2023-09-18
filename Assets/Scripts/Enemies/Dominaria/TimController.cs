@@ -43,9 +43,10 @@ public class TimController : MonoBehaviour
         {
                 GameObject bullet = Instantiate(bulletPrefab);
                 bullet.transform.position = firePoint.transform.position;
+                bullet.transform.rotation = Quaternion.LookRotation(bullet.transform.forward, player.transform.position - bullet.transform.position);
                 Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
                 rb.AddForce(firePoint.transform.forward * bulletForce, ForceMode2D.Impulse);
-                Destroy(bullet, attackRate);
-                timer = attackRate;
+                Destroy(bullet, (1 / attackRate));
+                timer = (1 / attackRate);
         }
 }

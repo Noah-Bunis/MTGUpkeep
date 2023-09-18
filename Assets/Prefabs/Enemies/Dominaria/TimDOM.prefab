@@ -127,12 +127,13 @@ MonoBehaviour:
   targetDestination: {fileID: 0}
   damageText: {fileID: 8393628075252482346}
   expDrop: {fileID: 7585809110396185465, guid: 590eacef579d9074ba0d30397b6744db, type: 3}
+  player: {fileID: 0}
   expDropYield: 30
-  speed: 0.5
+  speed: 0.7
   health: 10
   healthMax: 10
   damage: 1
-  damageRate: 1
+  damageRate: 0.5
   maxEnemyGroup: 1
 --- !u!212 &6379580691675851619
 SpriteRenderer:
@@ -236,7 +237,7 @@ MonoBehaviour:
   enemy: {fileID: 9007341081162277986}
   bulletPrefab: {fileID: 7682542347356439099, guid: 81a474b38584c6649b67bd65242e208e, type: 3}
   firePoint: {fileID: 5876057753724287316}
-  distanceToKeep: 1.25
+  distanceToKeep: 1
   bulletForce: 5
 --- !u!1 &5876057753724287316
 GameObject:

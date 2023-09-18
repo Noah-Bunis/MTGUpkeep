@@ -7,15 +7,11 @@ public class ItemManager: MonoBehaviour {
         [SerializeField] int goldYield;
         [SerializeField] new BoxCollider2D collider;
 
-        PlayerController player;
+        public PlayerController player;
         float timer = 10f;
 
-        void Awake() {
-                player = GameObject.FindWithTag("Player").GetComponent < PlayerController > ();
-                collider.size *= player.pickupRange;
-        }
-
         void FixedUpdate() {
+                collider.size = new Vector2(player.GetComponent<PlayerController>().pickupRange, player.GetComponent<PlayerController>().pickupRange);
                 timer -= Time.deltaTime;
                 if (timer <= 0f) Destroy(gameObject);
         }

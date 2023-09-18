@@ -7,6 +7,7 @@ public class EnemyContainer: MonoBehaviour {
         [SerializeField] Transform targetDestination;
         [SerializeField] TMP_Text damageText;
         [SerializeField] GameObject expDrop;
+        [SerializeField] public GameObject player;
         [SerializeField] int expDropYield;
         private bool isAttacking = false;
         private bool isTakingDamage = false;
@@ -28,17 +29,26 @@ public class EnemyContainer: MonoBehaviour {
                 rigidbody =  GetComponent < Rigidbody2D > ();
                 flash = GetComponent < SimpleFlash > ();
                 sprite = GetComponent < SpriteRenderer > ();
-                targetDestination = GameObject.FindWithTag("Player").transform;
                 damageText.text = "";
                 speed = Random.Range(speed * 0.9f, speed * 1.25f);
         }
 
         void FixedUpdate() {
+                targetDestination = player.transform;
                 Vector3 direction = (targetDestination.position - transform.position).normalized;
                 rigidbody.velocity = direction * speed;
 
-                if (direction.x < 0) transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-                else transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                if (direction.x < 0) 
+                {
+                        transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+                        damageText.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                }
+                else 
+                {
+                        transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                        damageText.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                        
+                }
 
                 if (health <= 0 && !isDying) {
                         isDying = true;
@@ -47,6 +57,7 @@ public class EnemyContainer: MonoBehaviour {
                         GameObject exp = Instantiate(expDrop);
                         exp.transform.position = transform.position;
                         exp.GetComponent < ItemManager > ().expYield = expDropYield;
+                        exp.GetComponent < ItemManager > ().player = player.GetComponent<PlayerController>();
                 }
         }
 

@@ -253,11 +253,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   healthMax: 50
-  critRate: 25
-  critDamageMultiplier: 1.3
-  pickupRange: 5
-  damage: 0.8
-  speed: 1
+  critRate: 33
+  critDamageMultiplier: 1.1
+  pickupRange: 15
+  damage: 1
+  speed: 1.25
   movement: {fileID: 1034309164571544709}
   healthBar: {fileID: 2266808041813724205}
   timer: 3
