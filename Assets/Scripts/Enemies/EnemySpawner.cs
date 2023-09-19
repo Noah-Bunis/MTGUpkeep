@@ -12,6 +12,7 @@ public class EnemySpawner: MonoBehaviour {
 	float spawnTimerMin = 0.1f;
 	float spawnTimer;
 	public float gameTimer = 60;
+	public bool isSpawning = true;
 
 	private void Awake()
 	{
@@ -23,12 +24,12 @@ public class EnemySpawner: MonoBehaviour {
 		spawnTimer -= Time.deltaTime;
 		gameTimer -= Time.deltaTime;
 		if (spawnTimer <= 0f) {
-			SpawnEnemy();
+			if (isSpawning) SpawnEnemy();
 			spawnTimer = spawnTimerMax;
 		}
 		if (gameTimer <= 0f) {
 			if (spawnTimerMax > spawnTimerMin) spawnTimerMax -= 0.125f;
-			if (pattern.level < pattern.enemies.Length -1); 
+			if (pattern.level < pattern.enemies.Count - 1); 
 				{
 					pattern.SwitchEnemyPattern();
 				}
@@ -46,6 +47,8 @@ public class EnemySpawner: MonoBehaviour {
 				GameObject newEnemy = Instantiate(enemies[i]);
 				newEnemy.transform.position = position + new Vector3(Random.Range(-1,1), Random.Range(-1,1), 0f);
 				newEnemy.GetComponent<EnemyContainer>().player = player;
+
+				CheckBoss(newEnemy);
 			}
 		}
 	}
@@ -65,5 +68,15 @@ public class EnemySpawner: MonoBehaviour {
 			}
 		}
 		return tempPosition;
+	}
+
+	private void CheckBoss(GameObject enemy)
+	{
+		BossContainer boss = enemy.GetComponent<BossContainer>();
+		if (boss != null)
+		{
+			isSpawning = false;
+			boss.spawner = this;
+		}
 	}
 }

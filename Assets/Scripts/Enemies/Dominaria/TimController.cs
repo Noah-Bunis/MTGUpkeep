@@ -6,7 +6,7 @@ public class TimController : MonoBehaviour
 {
         [SerializeField] EnemyContainer enemy;
         [SerializeField] GameObject bulletPrefab, firePoint;
-        private GameObject player;
+        public GameObject player;
         [SerializeField] float distanceToKeep, bulletForce;
         private float attackRate;
         private float timer;
@@ -14,7 +14,6 @@ public class TimController : MonoBehaviour
         void Awake()
         {
                 if (GameObject.FindObjectsOfType(typeof(TimController)).Length > 2) Destroy(gameObject);
-                player = GameObject.FindWithTag("Player");
 
                 attackRate = enemy.damageRate;
                 timer = attackRate;
@@ -22,6 +21,7 @@ public class TimController : MonoBehaviour
 
         void FixedUpdate()
         {
+                player = enemy.player;
                 KeepDistance(distanceToKeep);
                 timer -= Time.deltaTime;
                 if (timer < 0f) Attack();

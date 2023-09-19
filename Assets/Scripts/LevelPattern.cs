@@ -3,39 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelPattern: MonoBehaviour {
-        [SerializeField] public GameObject[] enemies;
+        [SerializeField] public List<GameObject> enemies;
         [SerializeField] public EnemySpawner spawner;
 
         public float level = 0f;
 
         public void SwitchEnemyPattern() {
-                if (level < enemies.Length - 0.5f) level += 0.5f;
-                GameObject[] temp = new GameObject[0];
+                if (level < enemies.Count - 0.5f) level += 0.5f;
+                List<GameObject> temp = new List<GameObject>();
                 switch (level) {
                 case 0:
                 case 1:
                 case 2:
                 case 4:
-                        temp = new GameObject[1];
-                        temp[0] = enemies[(int)level];
+                case 5:
+                        temp.Add(enemies[(int)level]);
+                        enemies[(int)level] = enemies[(int)level - 1];
                         break;
                 case 3:
                         EnhanceEnemies(0.3f);
-                        temp = new GameObject[1];
-                        temp[0] = enemies[(int)level];
+                        temp.Add(enemies[(int)level]);
                         break;
                         
                 case 0.5f:
                 case 1.5f:
-                        temp = enemies[0..(Mathf.CeilToInt(level))];
+                        temp = enemies.GetRange(0,Mathf.CeilToInt(level));
                         break;
                 case 2.5f:
                 case 3.5f:
                 case 4.5f:
-                        temp = enemies[1..(Mathf.CeilToInt(level))];
+                case 5.5f:
+                        temp = enemies.GetRange(0,Mathf.CeilToInt(level));
                         break;
                 }
-                spawner.enemies = temp;
+                spawner.enemies = temp.ToArray();
         }
 
         public void EnhanceEnemies(float amount)

@@ -37,7 +37,7 @@ public class LevelManager: MonoBehaviour {
                 gold += amount;
         }
 
-        private void CheckLevelUp() {
+        public void CheckLevelUp() {
                 if (exp >= TO_LEVEL_UP) {
                         exp -= TO_LEVEL_UP;
                         level += 1;

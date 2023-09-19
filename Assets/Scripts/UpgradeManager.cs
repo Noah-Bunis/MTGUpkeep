@@ -50,6 +50,7 @@ public class UpgradeManager: MonoBehaviour {
                 Instantiate(levelUpParticles, player.transform);
                 gameObject.SetActive(false);
                 foreach(GameObject position in positions) Destroy(position.transform.GetChild(0).gameObject);
+                player.GetComponent<LevelManager>().CheckLevelUp();
         }
 
         void UpgradeWeapon() {

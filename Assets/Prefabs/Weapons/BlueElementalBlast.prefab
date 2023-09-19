@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6840850079067430131}
   - component: {fileID: 342117918577991927}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6547976289496473292}
   - component: {fileID: 1257712084951570230}
   - component: {fileID: 8608121140975878517}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
