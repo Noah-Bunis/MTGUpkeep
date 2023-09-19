@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6155830284222128349}
   - component: {fileID: 2443681809041058292}
   m_Layer: 5
-  m_Name: LightningGreaves
+  m_Name: AngelsMercy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ef3fd928088257c4294b4e0dd7c7d80a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b394c35f6b758a3468f2921caad38b28, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822ba8756a997ad40aa7d4642d87ec9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: LightningGreaves
+  cardName: AngelsMercy
   weapon: {fileID: 0}
 --- !u!1 &1544681580291362238
 GameObject:
@@ -186,8 +186,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.27499, y: -87.37792}
-  m_SizeDelta: {x: 158.05, y: 42.5235}
+  m_AnchoredPosition: {x: 2.3108, y: -77.4071}
+  m_SizeDelta: {x: 162.12, y: 62.1867}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6393009445500242028
 CanvasRenderer:
@@ -224,14 +224,16 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 9
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: After lightning struck the cliffs, the ore became iron, the iron became
-    steel, and the steel became greaves. The lightning never left.
+  m_Text: "\"You pick every Angel\u2019s Mercy that passes by, jam 15 plains into
+    your deck, then swiftly and majestically annihilate all hope of coming even remotely
+    close to winning any of your matches, finishing the tournament 0-3 and leaving
+    the game store with your lifegain pride wrung out to dry.\" - Rhystic Studies"
 --- !u!1 &3028564390831151135
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,8 +269,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0014038086, y: 110.3258}
-  m_SizeDelta: {x: 157.5028, y: 27.4849}
+  m_AnchoredPosition: {x: 0.12640381, y: 112.7008}
+  m_SizeDelta: {x: 157.7528, y: 22.7349}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6756313870489139116
 CanvasRenderer:
@@ -311,7 +313,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lightning Greaves
+  m_Text: Angel's Mercy
 --- !u!1 &7270282037602385941
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,8 +349,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0018722, y: -45.9803}
-  m_SizeDelta: {x: 157.5, y: 24.9644}
+  m_AnchoredPosition: {x: 0.12567, y: -32.9282}
+  m_SizeDelta: {x: 157.75, y: 15.6723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5706226898549442554
 CanvasRenderer:
@@ -391,4 +393,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: Increases speed by 20%
+  m_Text: You restore 35% health

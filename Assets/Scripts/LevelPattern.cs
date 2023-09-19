@@ -15,11 +15,16 @@ public class LevelPattern: MonoBehaviour {
                 case 0:
                 case 1:
                 case 2:
-                case 3:
                 case 4:
                         temp = new GameObject[1];
                         temp[0] = enemies[(int)level];
                         break;
+                case 3:
+                        EnhanceEnemies(0.3f);
+                        temp = new GameObject[1];
+                        temp[0] = enemies[(int)level];
+                        break;
+                        
                 case 0.5f:
                 case 1.5f:
                         temp = enemies[0..(Mathf.CeilToInt(level))];
@@ -31,5 +36,18 @@ public class LevelPattern: MonoBehaviour {
                         break;
                 }
                 spawner.enemies = temp;
+        }
+
+        public void EnhanceEnemies(float amount)
+        {
+                foreach (GameObject enemy in enemies)
+                {
+                        EnemyContainer e = enemy.GetComponent<EnemyContainer>();
+                        e.speed += e.speed * amount;
+                        e.healthMax += (int)(e.healthMax * amount);
+                        e.health += (int)(e.health * amount);
+                        e.damage += e.damage * amount;
+                        e.damageRate += e.damageRate * amount;
+                }
         }
 }

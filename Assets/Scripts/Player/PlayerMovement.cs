@@ -31,11 +31,11 @@ public class PlayerMovement : MonoBehaviour
 
                         if (movementVector.x > 0)
                         {
-                        sprite.flipX = false;
+                                sprite.flipX = false;
                         }
                         else if (movementVector.x < 0) 
                         {
-                        sprite.flipX = true;
+                                sprite.flipX = true;
                         }
                         
                         if (Mathf.Abs(movementVector.x) > 0  || Mathf.Abs(movementVector.y) > 0) animator.SetBool("isWalking", true);
