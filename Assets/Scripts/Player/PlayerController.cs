@@ -27,7 +27,6 @@ public class PlayerController: MonoBehaviour {
 
                 if (health <= 0) {
                         Application.Quit();
-                        UnityEditor.EditorApplication.isPlaying = false;
                 } else if (health > healthMax) {
                         health = healthMax;
                 }
