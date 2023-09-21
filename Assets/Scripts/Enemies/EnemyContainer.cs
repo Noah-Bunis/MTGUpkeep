@@ -6,9 +6,9 @@ using TMPro;
 public class EnemyContainer: MonoBehaviour {
         [SerializeField] Transform targetDestination;
         [SerializeField] TMP_Text damageText;
+        [SerializeField] GameObject healthBar;
         [SerializeField] GameObject expDrop;
         [SerializeField] public GameObject player;
-        [SerializeField] int expDropYield;
         private bool isAttacking = false;
         private bool isTakingDamage = false;
         private bool isDying = false;
@@ -17,6 +17,11 @@ public class EnemyContainer: MonoBehaviour {
         SimpleFlash flash;
         SpriteRenderer sprite;
 
+        
+        [SerializeField] public float BASESPEED,BASEDAMAGE,BASEDAMAGERATE;
+        [SerializeField] public int BASEHEALTH,BASEEXPYIELD;
+        
+
         [Header("ENEMY ATTRIBUTES")]
         [SerializeField] public float speed;
         [SerializeField] public int health;
@@ -24,6 +29,7 @@ public class EnemyContainer: MonoBehaviour {
         [SerializeField] public float damage;
         [SerializeField] public float damageRate;
         [SerializeField] public int maxEnemyGroup;
+        [SerializeField] public int expDropYield;
 
         void Awake() {
                 rigidbody =  GetComponent < Rigidbody2D > ();
@@ -42,11 +48,13 @@ public class EnemyContainer: MonoBehaviour {
                 {
                         transform.rotation = Quaternion.Euler(0f, 180f, 0f);
                         damageText.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                        if (healthBar) healthBar.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 }
                 else 
                 {
                         transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                         damageText.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                        if (healthBar) healthBar.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                         
                 }
 
@@ -100,5 +108,15 @@ public class EnemyContainer: MonoBehaviour {
                 yield
                 return new WaitForSeconds(1 / (attack.weapon.attackRate * 2));
                 if (isTakingDamage) isTakingDamage = false;
+        }
+
+        public void DefaultStats()
+        {
+                speed = BASESPEED;
+                health = BASEHEALTH;
+                healthMax = BASEHEALTH;
+                damage = BASEDAMAGE;
+                damageRate = BASEDAMAGERATE;
+                expDropYield = BASEEXPYIELD;
         }
 }

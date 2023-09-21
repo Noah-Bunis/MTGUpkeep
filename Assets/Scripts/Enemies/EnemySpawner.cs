@@ -31,7 +31,7 @@ public class EnemySpawner: MonoBehaviour {
 			if (spawnTimerMax > spawnTimerMin) spawnTimerMax -= 0.125f;
 			if (pattern.level < pattern.enemies.Count - 1); 
 				{
-					pattern.SwitchEnemyPattern();
+					if (isSpawning) pattern.SwitchEnemyPattern();
 				}
 			gameTimer = 60;
 		}

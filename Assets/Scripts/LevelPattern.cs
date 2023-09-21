@@ -8,6 +8,15 @@ public class LevelPattern: MonoBehaviour {
 
         public float level = 0f;
 
+        public void Awake() 
+        {
+                foreach (GameObject enemy in enemies) 
+                {
+                        EnemyContainer enemyStats = enemy.GetComponent<EnemyContainer>();
+                        enemyStats.DefaultStats();
+                }
+        }
+
         public void SwitchEnemyPattern() {
                 if (level < enemies.Count - 0.5f) level += 0.5f;
                 List<GameObject> temp = new List<GameObject>();
@@ -15,13 +24,16 @@ public class LevelPattern: MonoBehaviour {
                 case 0:
                 case 1:
                 case 2:
+                case 6:
+                        temp.Add(enemies[(int)level]);
+                        break;
                 case 4:
-                case 5:
                         temp.Add(enemies[(int)level]);
                         enemies[(int)level] = enemies[(int)level - 1];
                         break;
                 case 3:
-                        EnhanceEnemies(0.3f);
+                case 5:
+                        EnhanceEnemies(0.05f);
                         temp.Add(enemies[(int)level]);
                         break;
                         
@@ -33,6 +45,7 @@ public class LevelPattern: MonoBehaviour {
                 case 3.5f:
                 case 4.5f:
                 case 5.5f:
+                case 6.5f:
                         temp = enemies.GetRange(0,Mathf.CeilToInt(level));
                         break;
                 }
@@ -49,6 +62,7 @@ public class LevelPattern: MonoBehaviour {
                         e.health += (int)(e.health * amount);
                         e.damage += e.damage * amount;
                         e.damageRate += e.damageRate * amount;
+                        e.expDropYield += (int)(amount*100);
                 }
         }
 }

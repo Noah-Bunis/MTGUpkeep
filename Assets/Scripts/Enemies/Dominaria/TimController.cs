@@ -13,7 +13,7 @@ public class TimController : MonoBehaviour
 
         void Awake()
         {
-                if (GameObject.FindObjectsOfType(typeof(TimController)).Length > 2) Destroy(gameObject);
+                if (GameObject.FindObjectsOfType(typeof(TimController)).Length > 1) Destroy(gameObject);
 
                 attackRate = enemy.damageRate;
                 timer = attackRate;

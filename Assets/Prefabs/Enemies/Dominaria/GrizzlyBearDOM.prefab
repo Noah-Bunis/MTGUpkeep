@@ -124,15 +124,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetDestination: {fileID: 0}
   damageText: {fileID: 8393628075252482346}
+  healthBar: {fileID: 0}
   expDrop: {fileID: 7585809110396185465, guid: c3dd528531f20b443a93cf7710c2a3a7, type: 3}
   player: {fileID: 0}
-  expDropYield: 20
-  speed: 0.9
+  BASESPEED: 1
+  BASEDAMAGE: 2
+  BASEDAMAGERATE: 4
+  BASEHEALTH: 20
+  BASEEXPYIELD: 20
+  speed: 1
   health: 20
   healthMax: 20
   damage: 2
   damageRate: 4
   maxEnemyGroup: 1
+  expDropYield: 20
 --- !u!212 &6379580691675851619
 SpriteRenderer:
   m_ObjectHideFlags: 0
