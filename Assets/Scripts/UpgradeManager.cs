@@ -23,10 +23,10 @@ public class UpgradeManager: MonoBehaviour {
                 HashSet<GameObject> cardsNotDrawn = new HashSet<GameObject>();
                 for (int i = 0; i < positions.Length; i++)
                 {
-                        switch (UnityEngine.Random.Range(0, 100))
+                        int rarity = UnityEngine.Random.Range(0, 100);
+                        switch (rarity)
                         {
                                 case int n when (n <= 50):
-                                case 0:
                                         cardsNotDrawn.Add(commonCards[UnityEngine.Random.Range(0,commonCards.Count)]);
                                         break;
                                 case int n when (n > 50 && n < 90):
@@ -41,7 +41,7 @@ public class UpgradeManager: MonoBehaviour {
                 for (int i = 0; i < selectedCards.Count; i++)
                 {
                         GameObject targetCard = selectedCards[i];
-                        selectedCards.Remove(targetCard);
+                        Debug.Log(targetCard);
                         Instantiate(targetCard, positions[i].transform);
                 }
         }
@@ -56,8 +56,7 @@ public class UpgradeManager: MonoBehaviour {
                                 UpgradePlayer("health%", 0.35f);
                                 break;
                         case "DarkProphecy":
-                                UpgradePlayer("DarkProphecy", 0f);
-                                rareCards.Remove(GetCard(cardName));
+                                AddItem();
                                 break;
                         case "LightningGreaves":
                                 UpgradePlayer("speed", 1.33f);
@@ -69,6 +68,9 @@ public class UpgradeManager: MonoBehaviour {
                         case "BlueElementalBlast":
                         case "Incinerate":
                                 UpgradeWeapon();
+                                break;
+                        //Item Cards
+                        case "ZuranOrb":
                                 break;
                 }
 
@@ -94,9 +96,14 @@ public class UpgradeManager: MonoBehaviour {
                 } 
                 catch (NullReferenceException)
                 {
-                        GameObject newWeapon = Instantiate((GetCard(cardName).GetComponent<CardButton>().weapon), player.transform.Find("EQUIPPEDITEMS").transform);
+                        GameObject newWeapon = Instantiate((GetCard(cardName).GetComponent<CardButton>().item), player.transform.Find("EQUIPPEDITEMS").transform);
                         newWeapon.name = cardName;
                 }
+        }
+
+        void AddItem() 
+        {
+                GameObject item = Instantiate((GetCard(cardName).GetComponent<CardButton>().item), player.transform.Find("EQUIPPEDITEMS").transform);
         }
 
         void UpgradePlayer(string stat, float amount) {
@@ -115,9 +122,6 @@ public class UpgradeManager: MonoBehaviour {
                                 break;
                         case "critRate":
                                 attributes.critRate += amount;
-                                break;
-                        case "DarkProphecy":
-                                attributes.hasCardDarkProphecy = true;
                                 break;
                 }
         }

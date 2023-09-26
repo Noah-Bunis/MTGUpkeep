@@ -6,7 +6,7 @@ public class CardButton : MonoBehaviour
 {
         UpgradeManager upgrade;
         [SerializeField] string cardName;
-        [SerializeField] public GameObject weapon;
+        [SerializeField] public GameObject item;
 
         void Awake()
         {

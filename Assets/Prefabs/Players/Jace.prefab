@@ -258,10 +258,10 @@ MonoBehaviour:
   pickupRange: 15
   damage: 1
   speed: 1.25
+  distanceTraveled: 0
   movement: {fileID: 1034309164571544709}
   healthBar: {fileID: 2266808041813724205}
   timer: 3
-  hasCardDarkProphecy: 0
 --- !u!95 &3435669286464672698
 Animator:
   serializedVersion: 5
@@ -301,6 +301,7 @@ MonoBehaviour:
   expBar: {fileID: 0}
   levelText: {fileID: 0}
   upgradeMenu: {fileID: 0}
+  equippedItems: {fileID: 4747834028764078575}
   player: {fileID: 5760862356422879682}
 --- !u!1 &8355111148281090689
 GameObject:

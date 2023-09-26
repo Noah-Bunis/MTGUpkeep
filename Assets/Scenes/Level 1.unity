@@ -344,7 +344,7 @@ PrefabInstance:
       objectReference: {fileID: 1373150080372407184, guid: 94282fcf295d2704181094e9f685d5ab, type: 3}
     - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
       propertyPath: uncommonCards.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
       propertyPath: commonCards.Array.data[0]
@@ -359,6 +359,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1373150080372407184, guid: ae7a60d52a39d194896b905af15382a0, type: 3}
     - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
+      propertyPath: commonCards.Array.data[3]
+      value: 
+      objectReference: {fileID: 1373150080372407184, guid: 94282fcf295d2704181094e9f685d5ab, type: 3}
+    - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
       propertyPath: uncommonCards.Array.data[0]
       value: 
       objectReference: {fileID: 1373150080372407184, guid: ae7a60d52a39d194896b905af15382a0, type: 3}
@@ -370,13 +374,17 @@ PrefabInstance:
       propertyPath: uncommonCards.Array.data[2]
       value: 
       objectReference: {fileID: 1373150080372407184, guid: f2062d31355bcd44ba699ad7385f66b1, type: 3}
+    - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
+      propertyPath: uncommonCards.Array.data[3]
+      value: 
+      objectReference: {fileID: 1373150080372407184, guid: 4114fbcb061f40e4799126200d703836, type: 3}
     - target: {fileID: 8224595754852947922, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
       propertyPath: m_Name
       value: UpgradeMenu
       objectReference: {fileID: 0}
     - target: {fileID: 8224595754852947922, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

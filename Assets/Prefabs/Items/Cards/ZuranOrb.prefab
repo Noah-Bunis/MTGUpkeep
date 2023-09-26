@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6155830284222128349}
   - component: {fileID: 2443681809041058292}
   m_Layer: 5
-  m_Name: DarkProphecy
+  m_Name: ZuranOrb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1f29c91c1d45d334d8161e4f40f552b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 20e8f1932b30ffd4c88521c8edfc9aa8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822ba8756a997ad40aa7d4642d87ec9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: DarkProphecy
-  item: {fileID: 5618890373224426343, guid: fb3637311fd6e094ebe8ae7ba0527919, type: 3}
+  cardName: ZuranOrb
+  item: {fileID: 5618890373224426343, guid: 6d8102c50c88c2e439a884b55669b18f, type: 3}
 --- !u!1 &1544681580291362238
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,8 +186,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.0606, y: -91.997}
-  m_SizeDelta: {x: 155.38, y: 31.525}
+  m_AnchoredPosition: {x: -0.030856, y: -87.629}
+  m_SizeDelta: {x: 140.98, y: 25.1501}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6393009445500242028
 CanvasRenderer:
@@ -219,19 +219,19 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: a1a1d641ab17e6b449b4e736e00a167f, type: 3}
-    m_FontSize: 9
+    m_FontSize: 10
     m_FontStyle: 2
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 9
+    m_MaxSize: 10
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: When the bog ran short on small animals, Ekri turned to the surrounding
-    farmlands.
+  m_Text: "\u201CI will go to any length to achieve my goal. Eternal life is worth
+    any sacrifice.\u201D\r\n\u2014Zur the Enchanter"
 --- !u!1 &3028564390831151135
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -311,7 +311,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dark Prophecy
+  m_Text: Zuran Orb
 --- !u!1 &7270282037602385941
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,8 +347,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.0607, y: -55.0179}
-  m_SizeDelta: {x: 155.3816, y: 42.4332}
+  m_AnchoredPosition: {x: -0.0307, y: -54.9088}
+  m_SizeDelta: {x: 140.9753, y: 42.6515}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5706226898549442554
 CanvasRenderer:
@@ -391,7 +391,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Increases experience gain by 25%
-
-    15% chance to take damage upon gaining
-    experience'
+  m_Text: Restore 10% health for every 12m traveled

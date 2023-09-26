@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: Incinerate
-  weapon: {fileID: 5433716018114793450, guid: 9edde31fbf2f2bd4c93d8d13700bd603, type: 3}
+  item: {fileID: 5433716018114793450, guid: 9edde31fbf2f2bd4c93d8d13700bd603, type: 3}
 --- !u!1 &1544681580291362238
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class LevelManager: MonoBehaviour {
         public int level = 1;
@@ -11,9 +12,12 @@ public class LevelManager: MonoBehaviour {
         public GameObject expBar;
         public Text levelText;
         [SerializeField] public GameObject upgradeMenu;
+        [SerializeField] public GameObject equippedItems;
         [SerializeField] public PlayerController player;
 
         public void Awake() {
+                upgradeMenu = GameObject.Find("UpgradeMenu");
+                upgradeMenu.SetActive(false);
                 expBar = GameObject.FindWithTag("ExpBar");
                 levelText = GameObject.Find("LevelText").GetComponent < Text > ();
         }
@@ -49,18 +53,14 @@ public class LevelManager: MonoBehaviour {
 
         public void CheckCardEffects(int amount)
         {
-                if (player.hasCardDarkProphecy)
+                for (int i = 0; i < equippedItems.transform.childCount; i++)
                 {
-                        exp += (int)(amount * 0.25);
-                        switch (Random.Range(0,100))
+                        DarkProphecy darkProphecy = equippedItems.transform.GetChild(i).GetComponent<DarkProphecy>();
+                        try 
                         {
-                                case int n when (n <= 15):
-                                        player.health -= 1;
-                                        player.HealthUpdate();
-                                        break;
-                                case int n when (n > 15):
-                                        break;
+                                darkProphecy.Trigger(amount);
                         }
+                        catch (NullReferenceException) {}
                 }
         }
 
