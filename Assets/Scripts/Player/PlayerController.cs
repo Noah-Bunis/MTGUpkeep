@@ -19,6 +19,9 @@ public class PlayerController: MonoBehaviour {
         private bool healthUpdate = false;
         public float timer = 2;
 
+        [Header("CARD EFFECTS")]
+        public bool hasCardDarkProphecy = false;
+
         void Awake() {
                 Application.targetFrameRate = Screen.currentResolution.refreshRate;
         }

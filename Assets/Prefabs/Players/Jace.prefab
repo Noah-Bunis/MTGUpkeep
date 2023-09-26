@@ -253,14 +253,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   healthMax: 50
-  critRate: 33
-  critDamageMultiplier: 1.1
+  critRate: 5
+  critDamageMultiplier: 2
   pickupRange: 15
   damage: 1
   speed: 1.25
   movement: {fileID: 1034309164571544709}
   healthBar: {fileID: 2266808041813724205}
   timer: 3
+  hasCardDarkProphecy: 0
 --- !u!95 &3435669286464672698
 Animator:
   serializedVersion: 5
@@ -300,6 +301,7 @@ MonoBehaviour:
   expBar: {fileID: 0}
   levelText: {fileID: 0}
   upgradeMenu: {fileID: 0}
+  player: {fileID: 5760862356422879682}
 --- !u!1 &8355111148281090689
 GameObject:
   m_ObjectHideFlags: 0

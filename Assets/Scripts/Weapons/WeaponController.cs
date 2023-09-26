@@ -39,7 +39,7 @@ public class WeaponController: MonoBehaviour {
                                         attackVelocity *= 1.1f;
                                         break;
                                 case "damage":
-                                        baseDamage *= 1.1f;
+                                        baseDamage *= 1.2f;
                                         break;
                                 }
                         }

@@ -11,6 +11,7 @@ public class LevelManager: MonoBehaviour {
         public GameObject expBar;
         public Text levelText;
         [SerializeField] public GameObject upgradeMenu;
+        [SerializeField] public PlayerController player;
 
         public void Awake() {
                 expBar = GameObject.FindWithTag("ExpBar");
@@ -30,6 +31,7 @@ public class LevelManager: MonoBehaviour {
 
         public void AddEXP(int amount) {
                 exp += amount;
+                CheckCardEffects(amount);
                 CheckLevelUp();
         }
 
@@ -42,6 +44,23 @@ public class LevelManager: MonoBehaviour {
                         exp -= TO_LEVEL_UP;
                         level += 1;
                         LevelUp();
+                }
+        }
+
+        public void CheckCardEffects(int amount)
+        {
+                if (player.hasCardDarkProphecy)
+                {
+                        exp += (int)(amount * 0.25);
+                        switch (Random.Range(0,100))
+                        {
+                                case int n when (n <= 15):
+                                        player.health -= 1;
+                                        player.HealthUpdate();
+                                        break;
+                                case int n when (n > 15):
+                                        break;
+                        }
                 }
         }
 

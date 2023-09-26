@@ -333,6 +333,5 @@ MonoBehaviour:
   levelUpgrades:
   - damage
   - rate
-  - rate
   - damage
   - length

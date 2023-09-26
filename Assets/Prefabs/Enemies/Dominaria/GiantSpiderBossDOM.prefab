@@ -89,7 +89,7 @@ MonoBehaviour:
   BASEDAMAGERATE: 12
   BASEHEALTH: 400
   BASEEXPYIELD: 400
-  speed: 1
+  speed: 1.1
   health: 400
   healthMax: 400
   damage: 2

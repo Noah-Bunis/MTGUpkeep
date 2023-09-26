@@ -412,6 +412,11 @@ MonoBehaviour:
   - {fileID: 1373150080372407184, guid: ae7a60d52a39d194896b905af15382a0, type: 3}
   - {fileID: 1373150080372407184, guid: 79a5a8998bcb0554cbb0acf551b2043b, type: 3}
   - {fileID: 1373150080372407184, guid: 842a6da7d160b8f4da4f044688d9d1ee, type: 3}
+  - {fileID: 1373150080372407184, guid: 3620223d7aa69ab4b84397efbfad3851, type: 3}
+  - {fileID: 1373150080372407184, guid: 94282fcf295d2704181094e9f685d5ab, type: 3}
+  commonCards: []
+  uncommonCards: []
+  rareCards: []
   positions:
   - {fileID: 6164794032953156485}
   - {fileID: 1703013650463660957}
