@@ -7,6 +7,7 @@ public class UpgradeManager: MonoBehaviour {
         public GameObject player;
         public string cardName;
         [SerializeField] public GameObject levelUpParticles;
+        [SerializeField] public CursorManager cursor;
 
         [SerializeField] public List<GameObject> cards;
         [SerializeField] public List<GameObject> commonCards;
@@ -20,6 +21,8 @@ public class UpgradeManager: MonoBehaviour {
 
         public void DealCards()
         {
+                cursor.UnlockCursor();
+                Cursor.visible = true;
                 HashSet<GameObject> cardsNotDrawn = new HashSet<GameObject>();
                 for (int i = 0; i < positions.Length; i++)
                 {
@@ -75,7 +78,9 @@ public class UpgradeManager: MonoBehaviour {
                 }
 
                 Time.timeScale = 1;
+                cursor.LockCursor();
                 Instantiate(levelUpParticles, player.transform);
+                Cursor.visible = false;
                 gameObject.SetActive(false);
                 foreach(GameObject position in positions)
                 {

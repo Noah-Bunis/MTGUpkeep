@@ -16,7 +16,6 @@ public class WorldScrolling: MonoBehaviour {
 
         private void Awake() {
                 terrainTiles = new GameObject[terrainTileHorizontalCount, terrainTileVerticalCount];
-
         }
 
         public void Add(GameObject tileGameObject, Vector2Int tilePosition) {
