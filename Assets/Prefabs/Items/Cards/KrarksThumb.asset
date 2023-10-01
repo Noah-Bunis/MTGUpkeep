@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83cf56c6558d86b429cf6060501397e0, type: 3}
+  m_Name: KrarksThumb
+  m_EditorClassIdentifier: 
+  title: Krark's Thumb
+  cardName: KrarksThumb
+  rules: Increases chance of critical hit by 12%
+  flavor: "\u201CI can think of one goblin it ain\u2019t so lucky for.\u201D \u2014Slobad,
+    goblin tinkerer"
+  art: {fileID: 21300000, guid: 6f1101b39fb13924396c97c849f4b1ad, type: 3}
+  item: {fileID: 0}
+  titleColor: {r: 0, g: 0, b: 0, a: 1}
+  selectedColor: {r: 0.60784316, g: 0.5647059, b: 0.47058824, a: 1}

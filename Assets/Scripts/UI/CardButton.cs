@@ -5,7 +5,7 @@ using UnityEngine;
 public class CardButton : MonoBehaviour
 {
         UpgradeManager upgrade;
-        [SerializeField] string cardName;
+        public string cardName;
         [SerializeField] public GameObject item;
 
         void Awake()

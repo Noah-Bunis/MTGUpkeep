@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83cf56c6558d86b429cf6060501397e0, type: 3}
+  m_Name: ZuranOrb
+  m_EditorClassIdentifier: 
+  title: Zuran Orb
+  cardName: ZuranOrb
+  rules: Restore 10% health for every 12m traveled
+  flavor: "\u201CI will go to any length to achieve my goal. Eternal life is worth
+    any sacrifice.\u201D \u2014Zur the Enchanter"
+  art: {fileID: 21300000, guid: 20e8f1932b30ffd4c88521c8edfc9aa8, type: 3}
+  item: {fileID: 5618890373224426343, guid: 6d8102c50c88c2e439a884b55669b18f, type: 3}
+  titleColor: {r: 0, g: 0, b: 0, a: 1}
+  selectedColor: {r: 0.60784316, g: 0.5647059, b: 0.47058824, a: 1}

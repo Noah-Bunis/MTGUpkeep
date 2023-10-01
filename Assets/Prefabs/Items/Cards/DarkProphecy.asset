@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83cf56c6558d86b429cf6060501397e0, type: 3}
+  m_Name: DarkProphecy
+  m_EditorClassIdentifier: 
+  title: Dark Prophecy
+  cardName: DarkProphecy
+  rules: Increases experience gain by 25% 15% chance to take damage upon gaining
+    experience
+  flavor: When the bog ran short on small animals, Ekri turned to the surrounding
+    farmlands.
+  art: {fileID: 21300000, guid: 1f29c91c1d45d334d8161e4f40f552b8, type: 3}
+  item: {fileID: 5618890373224426343, guid: fb3637311fd6e094ebe8ae7ba0527919, type: 3}
+  titleColor: {r: 0, g: 0, b: 0, a: 1}
+  selectedColor: {r: 0.7264151, g: 0.53910047, b: 0.7264151, a: 1}

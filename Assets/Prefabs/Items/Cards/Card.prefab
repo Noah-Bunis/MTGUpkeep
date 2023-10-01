@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 2158167577296685280}
   - component: {fileID: 6155830284222128349}
   - component: {fileID: 2443681809041058292}
+  - component: {fileID: 7256624746758539529}
   m_Layer: 5
-  m_Name: LightningGreaves
+  m_Name: Card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +72,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ef3fd928088257c4294b4e0dd7c7d80a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d4c2bf7a90459684cb565efc869a64e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -94,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 1
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -103,9 +104,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.5568628, g: 0.5568628, b: 0.5568628, a: 1}
+    m_PressedColor: {r: 0.5568628, g: 0.5568628, b: 0.5568628, a: 1}
+    m_SelectedColor: {r: 0.5568628, g: 0.5568628, b: 0.5568628, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -149,8 +150,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822ba8756a997ad40aa7d4642d87ec9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: LightningGreaves
-  weapon: {fileID: 0}
+  cardName: 
+  item: {fileID: 0}
+--- !u!114 &7256624746758539529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373150080372407184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5934395bd75e24393a074f7c003991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 11400000, guid: 433dc8b036dfb7248b5a099a96bbb059, type: 2}
+  cardTitle: {fileID: 7457628816328853731}
+  cardRules: {fileID: 1001555782332483266}
+  cardFlavor: {fileID: 2069475409528431966}
+  cardArt: {fileID: 2158167577296685280}
+  button: {fileID: 2443681809041058292}
+  buttonUI: {fileID: 6155830284222128349}
 --- !u!1 &1544681580291362238
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,8 +206,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.27591, y: -82.219}
-  m_SizeDelta: {x: 158.05, y: 52.8413}
+  m_AnchoredPosition: {x: -0.030856, y: -87.629}
+  m_SizeDelta: {x: 140.98, y: 25.1501}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6393009445500242028
 CanvasRenderer:
@@ -219,19 +239,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: a1a1d641ab17e6b449b4e736e00a167f, type: 3}
-    m_FontSize: 9
+    m_FontSize: 10
     m_FontStyle: 2
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 9
+    m_MaxSize: 10
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: After lightning struck the cliffs, the ore became iron, the iron became
-    steel, and the steel became greaves. The lightning never left.
+  m_Text: '"Card Flavor Text"'
 --- !u!1 &3028564390831151135
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +263,7 @@ GameObject:
   - component: {fileID: 6756313870489139116}
   - component: {fileID: 7457628816328853731}
   m_Layer: 5
-  m_Name: CardName
+  m_Name: CardTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -267,8 +286,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0014038086, y: 110.3258}
-  m_SizeDelta: {x: 157.5028, y: 27.4849}
+  m_AnchoredPosition: {x: 0.0011046, y: 117.1285}
+  m_SizeDelta: {x: 157.5, y: 16.5644}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6756313870489139116
 CanvasRenderer:
@@ -311,7 +330,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lightning Greaves
+  m_Text: Card Name
 --- !u!1 &7270282037602385941
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,8 +366,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0018722, y: -46.96718}
-  m_SizeDelta: {x: 157.5, y: 22.9907}
+  m_AnchoredPosition: {x: -0.0307, y: -54.9088}
+  m_SizeDelta: {x: 140.9753, y: 42.6515}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5706226898549442554
 CanvasRenderer:
@@ -385,10 +404,10 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 14
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.2
-  m_Text: Increases speed by 33%
+    m_LineSpacing: 1
+  m_Text: Card Description

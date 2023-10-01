@@ -322,6 +322,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3909700574690649421, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3924294822179959617, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
       propertyPath: InitialModule.startSize.minScalar
       value: 3
@@ -330,62 +334,6 @@ PrefabInstance:
       propertyPath: cursor
       value: 
       objectReference: {fileID: 769718315}
-    - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
-      propertyPath: rareCards.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
-      propertyPath: commonCards.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
-      propertyPath: rareCards.Array.data[0]
-      value: 
-      objectReference: {fileID: 1373150080372407184, guid: 79a5a8998bcb0554cbb0acf551b2043b, type: 3}
-    - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
-      propertyPath: rareCards.Array.data[1]
-      value: 
-      objectReference: {fileID: 1373150080372407184, guid: 3620223d7aa69ab4b84397efbfad3851, type: 3}
-    - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
-      propertyPath: rareCards.Array.data[2]
-      value: 
-      objectReference: {fileID: 1373150080372407184, guid: 94282fcf295d2704181094e9f685d5ab, type: 3}
-    - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
-      propertyPath: uncommonCards.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
-      propertyPath: commonCards.Array.data[0]
-      value: 
-      objectReference: {fileID: 1373150080372407184, guid: 842a6da7d160b8f4da4f044688d9d1ee, type: 3}
-    - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
-      propertyPath: commonCards.Array.data[1]
-      value: 
-      objectReference: {fileID: 1373150080372407184, guid: f2062d31355bcd44ba699ad7385f66b1, type: 3}
-    - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
-      propertyPath: commonCards.Array.data[2]
-      value: 
-      objectReference: {fileID: 1373150080372407184, guid: ae7a60d52a39d194896b905af15382a0, type: 3}
-    - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
-      propertyPath: commonCards.Array.data[3]
-      value: 
-      objectReference: {fileID: 1373150080372407184, guid: 94282fcf295d2704181094e9f685d5ab, type: 3}
-    - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
-      propertyPath: uncommonCards.Array.data[0]
-      value: 
-      objectReference: {fileID: 1373150080372407184, guid: ae7a60d52a39d194896b905af15382a0, type: 3}
-    - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
-      propertyPath: uncommonCards.Array.data[1]
-      value: 
-      objectReference: {fileID: 1373150080372407184, guid: 3620223d7aa69ab4b84397efbfad3851, type: 3}
-    - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
-      propertyPath: uncommonCards.Array.data[2]
-      value: 
-      objectReference: {fileID: 1373150080372407184, guid: f2062d31355bcd44ba699ad7385f66b1, type: 3}
-    - target: {fileID: 4889532597633161715, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
-      propertyPath: uncommonCards.Array.data[3]
-      value: 
-      objectReference: {fileID: 1373150080372407184, guid: 4114fbcb061f40e4799126200d703836, type: 3}
     - target: {fileID: 8224595754852947922, guid: d34d6e74eb2ade140b5f27249e5d5880, type: 3}
       propertyPath: m_Name
       value: UpgradeMenu

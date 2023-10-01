@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 public class UpgradeManager: MonoBehaviour {
         public GameObject player;
         public string cardName;
+        public Card emptyCard;
         [SerializeField] public GameObject levelUpParticles;
         [SerializeField] public CursorManager cursor;
 
-        [SerializeField] public List<GameObject> cards;
-        [SerializeField] public List<GameObject> commonCards;
-        [SerializeField] public List<GameObject> uncommonCards;
-        [SerializeField] public List<GameObject> rareCards;
+        [SerializeField] public List<Card> cards;
+        [SerializeField] public List<Card> commonCards;
+        [SerializeField] public List<Card> uncommonCards;
+        [SerializeField] public List<Card> rareCards;
         [SerializeField] public GameObject[] positions;
 
         void Awake() {
@@ -23,7 +25,7 @@ public class UpgradeManager: MonoBehaviour {
         {
                 cursor.UnlockCursor();
                 Cursor.visible = true;
-                HashSet<GameObject> cardsNotDrawn = new HashSet<GameObject>();
+                HashSet<Card> cardsNotDrawn = new HashSet<Card>();
                 for (int i = 0; i < positions.Length; i++)
                 {
                         int rarity = UnityEngine.Random.Range(0, 100);
@@ -32,20 +34,29 @@ public class UpgradeManager: MonoBehaviour {
                                 case int n when (n <= 50):
                                         cardsNotDrawn.Add(commonCards[UnityEngine.Random.Range(0,commonCards.Count)]);
                                         break;
-                                case int n when (n > 50 && n < 90):
+                                case int n when (n > 50 && n < 85):
                                         cardsNotDrawn.Add(uncommonCards[UnityEngine.Random.Range(0,uncommonCards.Count)]);
                                         break;
-                                case int n when (n >= 90):
+                                case int n when (n >= 85):
                                         cardsNotDrawn.Add(rareCards[UnityEngine.Random.Range(0,rareCards.Count)]);
                                         break;
                         }
                 }
-                List<GameObject> selectedCards = new List<GameObject>(cardsNotDrawn);
+                List<Card> selectedCards = new List<Card>(cardsNotDrawn);
                 for (int i = 0; i < selectedCards.Count; i++)
                 {
-                        GameObject targetCard = selectedCards[i];
+                        Card targetCard = selectedCards[i];
                         Debug.Log(targetCard);
-                        Instantiate(targetCard, positions[i].transform);
+                        positions[i].GetComponent<CardDisplay>().card = targetCard;
+                        positions[i].GetComponent<Button>().interactable = true;
+                }
+                for (int i = 0; i < positions.Length; i++)
+                {
+                        if (positions[i].GetComponent<CardDisplay>().card == emptyCard)
+                        {
+                                positions[i].SetActive(false);
+                                positions[i].GetComponent<Button>().interactable = false;
+                        }
                 }
         }
 
@@ -61,19 +72,19 @@ public class UpgradeManager: MonoBehaviour {
                         case "DarkProphecy":
                                 AddItem();
                                 break;
+                        case "ZuranOrb":
+                                AddItem();
+                                break;
                         case "LightningGreaves":
                                 UpgradePlayer("speed", 1.33f);
                                 break;
                         case "KrarksThumb":
-                                UpgradePlayer("critRate", 20f);
+                                UpgradePlayer("critRate", 12f);
                                 break;
                         //Weapon Cards
                         case "BlueElementalBlast":
                         case "Incinerate":
                                 UpgradeWeapon();
-                                break;
-                        //Item Cards
-                        case "ZuranOrb":
                                 break;
                 }
 
@@ -82,11 +93,11 @@ public class UpgradeManager: MonoBehaviour {
                 Instantiate(levelUpParticles, player.transform);
                 Cursor.visible = false;
                 gameObject.SetActive(false);
-                foreach(GameObject position in positions)
+                foreach(GameObject card in positions)
                 {
                         try
                         {
-                                Destroy(position.transform.GetChild(0).gameObject);
+                                card.GetComponent<CardDisplay>().card = emptyCard;
                         }
                         catch(UnityException){}
                 }
@@ -101,14 +112,14 @@ public class UpgradeManager: MonoBehaviour {
                 } 
                 catch (NullReferenceException)
                 {
-                        GameObject newWeapon = Instantiate((GetCard(cardName).GetComponent<CardButton>().item), player.transform.Find("EQUIPPEDITEMS").transform);
+                        GameObject newWeapon = Instantiate((GetCard(cardName).item), player.transform.Find("EQUIPPEDITEMS").transform);
                         newWeapon.name = cardName;
                 }
         }
 
         void AddItem() 
         {
-                GameObject item = Instantiate((GetCard(cardName).GetComponent<CardButton>().item), player.transform.Find("EQUIPPEDITEMS").transform);
+                GameObject item = Instantiate((GetCard(cardName).item), player.transform.Find("EQUIPPEDITEMS").transform);
         }
 
         void UpgradePlayer(string stat, float amount) {
@@ -131,7 +142,7 @@ public class UpgradeManager: MonoBehaviour {
                 }
         }
 
-        GameObject GetCard(string cardName) {
+        Card GetCard(string cardName) {
                 for (int i = 0; i < cards.Count; i++) {
                         if (cards[i].name == cardName) {
                                 return cards[i];

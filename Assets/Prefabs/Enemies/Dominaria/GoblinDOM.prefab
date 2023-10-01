@@ -127,7 +127,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   expDrop: {fileID: 7585809110396185465, guid: 3a7afef2882becb4db65584d169c282c, type: 3}
   player: {fileID: 0}
-  BASESPEED: 1
+  BASESPEED: 0.75
   BASEDAMAGE: 1
   BASEDAMAGERATE: 2
   BASEHEALTH: 10

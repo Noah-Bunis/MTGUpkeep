@@ -255,9 +255,9 @@ MonoBehaviour:
   healthMax: 50
   critRate: 5
   critDamageMultiplier: 2
-  pickupRange: 15
+  pickupRange: 7.5
   damage: 1
-  speed: 1.25
+  speed: 1.15
   distanceTraveled: 0
   movement: {fileID: 1034309164571544709}
   healthBar: {fileID: 2266808041813724205}
