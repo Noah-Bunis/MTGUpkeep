@@ -102,6 +102,7 @@ MonoBehaviour:
   expYield: 10
   goldYield: 0
   collider: {fileID: 178184823445323703}
+  player: {fileID: 0}
 --- !u!61 &178184823445323703
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -213,8 +214,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0022999644, y: 0.0042000413, z: 0}
-    m_Extent: {x: 1.0076001, y: 1.0054, z: 0}
+    m_Center: {x: 0.0029500127, y: -0.005300015, z: 0}
+    m_Extent: {x: 1.0048499, y: 0.9984, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

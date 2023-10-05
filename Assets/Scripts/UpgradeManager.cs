@@ -51,7 +51,6 @@ public class UpgradeManager: MonoBehaviour {
                 for (int i = 0; i < selectedCards.Count; i++)
                 {
                         Card targetCard = selectedCards[i];
-                        Debug.Log(targetCard);
                         positions[i].GetComponent<CardDisplay>().card = targetCard;
                         positions[i].GetComponent<Button>().interactable = true;
                 }
@@ -77,17 +76,23 @@ public class UpgradeManager: MonoBehaviour {
                         case "BlackLotus":
                                 player.GetComponent<LevelManager>().AddLevels(3);
                                 break;
+                        case "ChainReaction":
+                                AddItem();
+                                break;
                         case "DarkProphecy":
                                 AddItem();
                                 break;
-                        case "ZuranOrb":
-                                AddItem();
+                        case "FieryEmancipation":
+                                UpgradePlayer("critDamage", 3f);
+                                break;
+                        case "KrarksThumb":
+                                UpgradePlayer("critRate", 12f);
                                 break;
                         case "LightningGreaves":
                                 UpgradePlayer("speed", 1.33f);
                                 break;
-                        case "KrarksThumb":
-                                UpgradePlayer("critRate", 12f);
+                        case "ZuranOrb":
+                                AddItem();
                                 break;
                         //Weapon Cards
                         case "BlueElementalBlast":
@@ -146,6 +151,9 @@ public class UpgradeManager: MonoBehaviour {
                                 break;
                         case "critRate":
                                 attributes.critRate += amount;
+                                break;
+                        case "critDamage":
+                                attributes.critDamageMultiplier *= amount;
                                 break;
                 }
         }

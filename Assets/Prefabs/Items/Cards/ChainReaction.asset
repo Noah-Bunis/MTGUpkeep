@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83cf56c6558d86b429cf6060501397e0, type: 3}
+  m_Name: ChainReaction
+  m_EditorClassIdentifier: 
+  title: Chain Reaction
+  cardName: ChainReaction
+  rules: Deals X damage to each creature, where X is the number of creatures
+  flavor: "\u201CWe train for the improbable, like lightning striking the same place
+    twice, or striking everywhere at once.\u201D \u2014Nundari, Sea Gate militia
+    captain"
+  art: {fileID: 0}
+  item: {fileID: 1230546507736986663, guid: e21944122c622b5419392cada41c6c6b, type: 3}
+  titleColor: {r: 0, g: 0, b: 0, a: 0}
+  selectedColor: {r: 0.98039216, g: 0.6666667, b: 0.56078434, a: 1}

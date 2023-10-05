@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83cf56c6558d86b429cf6060501397e0, type: 3}
+  m_Name: FieryEmancipation
+  m_EditorClassIdentifier: 
+  title: Fiery Emancipation
+  cardName: FieryEmancipation
+  rules: Increases critical hit damage by 300%
+  flavor: "\u201COne day the mountain\u2019s fire will rise up to burn away our chains
+    and end this age of oppression.\u201D \u2014The Molten Prophecy"
+  art: {fileID: 0}
+  item: {fileID: 0}
+  titleColor: {r: 0, g: 0, b: 0, a: 0}
+  selectedColor: {r: 0.98039216, g: 0.6666667, b: 0.56078434, a: 1}

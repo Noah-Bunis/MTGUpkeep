@@ -84,8 +84,7 @@ public class EnemyContainer: MonoBehaviour {
                 flash.Flash();
                 if (damage != 0) {
                         damageText.text = damage.ToString();
-                        yield
-                        return new WaitForSeconds(0.2f);
+                        yield return new WaitForSeconds(0.2f);
                         damageText.text = "";
                 }
         }
@@ -95,8 +94,7 @@ public class EnemyContainer: MonoBehaviour {
                         player.health -= (int) damage;
                         player.HealthUpdate();
                 }
-                yield
-                return new WaitForSeconds(1 / damageRate);
+                yield return new WaitForSeconds(1 / damageRate);
                 if (isAttacking) isAttacking = false;
         }
 
@@ -105,8 +103,7 @@ public class EnemyContainer: MonoBehaviour {
                         isTakingDamage = true;
                         attack.ApplyDamage(this);
                 }
-                yield
-                return new WaitForSeconds(1 / (attack.weapon.attackRate * 2));
+                yield return new WaitForSeconds(1 / (attack.weapon.attackRate * 2));
                 if (isTakingDamage) isTakingDamage = false;
         }
 
