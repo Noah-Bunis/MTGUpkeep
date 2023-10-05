@@ -9,12 +9,14 @@ public class UpgradeManager: MonoBehaviour {
         public string cardName;
         public Card emptyCard;
         [SerializeField] public GameObject levelUpParticles;
+        [SerializeField] public GameObject blackLotusParticles;
         [SerializeField] public CursorManager cursor;
 
         [SerializeField] public List<Card> cards;
         [SerializeField] public List<Card> commonCards;
         [SerializeField] public List<Card> uncommonCards;
         [SerializeField] public List<Card> rareCards;
+        [SerializeField] public List<Card> mythicCards;
         [SerializeField] public GameObject[] positions;
 
         void Awake() {
@@ -37,8 +39,11 @@ public class UpgradeManager: MonoBehaviour {
                                 case int n when (n > 50 && n < 85):
                                         cardsNotDrawn.Add(uncommonCards[UnityEngine.Random.Range(0,uncommonCards.Count)]);
                                         break;
-                                case int n when (n >= 85):
+                                case int n when (n >= 85 && n < 95):
                                         cardsNotDrawn.Add(rareCards[UnityEngine.Random.Range(0,rareCards.Count)]);
+                                        break;
+                                case int n when (n >= 95):
+                                        cardsNotDrawn.Add(mythicCards[UnityEngine.Random.Range(0,mythicCards.Count)]);
                                         break;
                         }
                 }
@@ -69,6 +74,9 @@ public class UpgradeManager: MonoBehaviour {
                         case "AngelsMercy":
                                 UpgradePlayer("health%", 0.35f);
                                 break;
+                        case "BlackLotus":
+                                player.GetComponent<LevelManager>().AddLevels(3);
+                                break;
                         case "DarkProphecy":
                                 AddItem();
                                 break;
@@ -90,7 +98,7 @@ public class UpgradeManager: MonoBehaviour {
 
                 Time.timeScale = 1;
                 cursor.LockCursor();
-                Instantiate(levelUpParticles, player.transform);
+                if (cardName == "BlackLotus") Instantiate(blackLotusParticles, player.transform); else Instantiate(levelUpParticles, player.transform);
                 Cursor.visible = false;
                 gameObject.SetActive(false);
                 foreach(GameObject card in positions)

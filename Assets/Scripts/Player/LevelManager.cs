@@ -7,6 +7,7 @@ using System;
 
 public class LevelManager: MonoBehaviour {
         public int level = 1;
+        public int queuedLevels = 0;
         public int exp;
         public int gold;
         public GameObject expBar;
@@ -27,6 +28,7 @@ public class LevelManager: MonoBehaviour {
                 expBar.GetComponent < Slider > ().maxValue = TO_LEVEL_UP;
                 levelText.text = "Level " + level;
         }
+
         public int TO_LEVEL_UP {
                 get {
                         return level * 100;
@@ -39,6 +41,12 @@ public class LevelManager: MonoBehaviour {
                 CheckLevelUp();
         }
 
+        public void AddLevels(int amount)
+        {
+                queuedLevels += amount;
+                level += amount;
+        }
+
         public void AddGold(int amount) {
                 gold += amount;
         }
@@ -47,6 +55,11 @@ public class LevelManager: MonoBehaviour {
                 if (exp >= TO_LEVEL_UP) {
                         exp -= TO_LEVEL_UP;
                         level += 1;
+                        LevelUp();
+                }
+                else if (queuedLevels > 0)
+                {
+                        queuedLevels -= 1;
                         LevelUp();
                 }
         }

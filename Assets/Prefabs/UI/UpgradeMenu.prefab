@@ -310,6 +310,7 @@ MonoBehaviour:
   cardName: 
   emptyCard: {fileID: 11400000, guid: 433dc8b036dfb7248b5a099a96bbb059, type: 2}
   levelUpParticles: {fileID: 7389303063477709544, guid: b540c9c63fca68b42b226b8ca4088294, type: 3}
+  blackLotusParticles: {fileID: 7389303063477709544, guid: a4ae7ae37f3d906489fc78041c049529, type: 3}
   cursor: {fileID: 0}
   cards:
   - {fileID: 11400000, guid: 84ad2960576baab4ea2cfe4509fbda80, type: 2}
@@ -321,6 +322,7 @@ MonoBehaviour:
   commonCards:
   - {fileID: 11400000, guid: 84ad2960576baab4ea2cfe4509fbda80, type: 2}
   - {fileID: 11400000, guid: 4f0b5f0c2a9524b4e8c62a0595bb0c55, type: 2}
+  - {fileID: 11400000, guid: 08a12dadccdabf14f8ee51660263f4b6, type: 2}
   uncommonCards:
   - {fileID: 11400000, guid: 4f0b5f0c2a9524b4e8c62a0595bb0c55, type: 2}
   - {fileID: 11400000, guid: 2d7a05f65f8becb49aa17c6352aa9e3e, type: 2}
@@ -328,6 +330,8 @@ MonoBehaviour:
   rareCards:
   - {fileID: 11400000, guid: 6b031dcc68bafa44c8a3cabbaa38fe9e, type: 2}
   - {fileID: 11400000, guid: ceb2640b0d6db5a4fbbe7f21adc2942b, type: 2}
+  mythicCards:
+  - {fileID: 11400000, guid: 08a12dadccdabf14f8ee51660263f4b6, type: 2}
   positions:
   - {fileID: 5546176052658167622}
   - {fileID: 2437072262110797911}

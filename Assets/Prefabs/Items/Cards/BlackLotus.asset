@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83cf56c6558d86b429cf6060501397e0, type: 3}
-  m_Name: KrarksThumb
+  m_Name: BlackLotus
   m_EditorClassIdentifier: 
-  title: Krark's Thumb
-  cardName: KrarksThumb
-  rules: Increases chance of critical hit by 12%
-  flavor: "\u201CI can think of one goblin it ain\u2019t so lucky for.\u201D \u2014Slobad,
-    goblin tinkerer"
-  art: {fileID: 21300000, guid: 6f1101b39fb13924396c97c849f4b1ad, type: 3}
+  title: Black Lotus
+  cardName: BlackLotus
+  rules: Level up three times
+  flavor: 
+  art: {fileID: 21300000, guid: 713c4fdae9dba494289af7cc746617df, type: 3}
   item: {fileID: 0}
   titleColor: {r: 0, g: 0, b: 0, a: 1}
-  selectedColor: {r: 0.64705884, g: 0.6039216, b: 0.50980395, a: 1}
+  selectedColor: {r: 0.9060407, g: 0.81761, b: 1, a: 1}
