@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Black Lotus
   cardName: BlackLotus
-  rules: Level up 3 times
+  rules: Level up three times.
   flavor: 
   art: {fileID: 21300000, guid: 713c4fdae9dba494289af7cc746617df, type: 3}
   item: {fileID: 0}

@@ -83,7 +83,7 @@ public class UpgradeManager: MonoBehaviour {
                                 AddItem();
                                 break;
                         case "FieryEmancipation":
-                                UpgradePlayer("critDamage", 3f);
+                                UpgradePlayer("critDamage", 1.5f);
                                 break;
                         case "KrarksThumb":
                                 UpgradePlayer("critRate", 12f);
@@ -100,21 +100,7 @@ public class UpgradeManager: MonoBehaviour {
                                 UpgradeWeapon();
                                 break;
                 }
-
-                Time.timeScale = 1;
-                cursor.LockCursor();
-                if (cardName == "BlackLotus") Instantiate(blackLotusParticles, player.transform); else Instantiate(levelUpParticles, player.transform);
-                Cursor.visible = false;
-                gameObject.SetActive(false);
-                foreach(GameObject card in positions)
-                {
-                        try
-                        {
-                                card.GetComponent<CardDisplay>().card = emptyCard;
-                        }
-                        catch(UnityException){}
-                }
-                player.GetComponent<LevelManager>().CheckLevelUp();
+                FinishSelection();
         }
 
         void UpgradeWeapon() {
@@ -165,5 +151,24 @@ public class UpgradeManager: MonoBehaviour {
                         }
                 }
                 return null;
+        }
+
+
+        private void FinishSelection()
+        {
+                Time.timeScale = 1;
+                cursor.LockCursor();
+                if (cardName == "BlackLotus") Instantiate(blackLotusParticles, player.transform); else Instantiate(levelUpParticles, player.transform);
+                Cursor.visible = false;
+                gameObject.SetActive(false);
+                foreach(GameObject card in positions)
+                {
+                        try
+                        {
+                                card.GetComponent<CardDisplay>().card = emptyCard;
+                        }
+                        catch(UnityException){}
+                }
+                player.GetComponent<LevelManager>().CheckLevelUp();
         }
 }

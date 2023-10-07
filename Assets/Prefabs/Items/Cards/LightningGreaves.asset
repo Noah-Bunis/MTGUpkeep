@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Lightning Greaves
   cardName: LightningGreaves
-  rules: Increases speed by 33%
+  rules: Increases speed by 33%.
   flavor: After lightning struck the cliffs, the ore became iron, the iron became
     steel, and the steel became greaves. The lightning never left.
   art: {fileID: 21300000, guid: ef3fd928088257c4294b4e0dd7c7d80a, type: 3}

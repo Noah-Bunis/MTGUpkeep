@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Zuran Orb
   cardName: ZuranOrb
-  rules: Restore 10% health for every 12m traveled
+  rules: Restore 10% health for every 12m traveled.
   flavor: "\u201CI will go to any length to achieve my goal. Eternal life is worth
     any sacrifice.\u201D \u2014Zur the Enchanter"
   art: {fileID: 21300000, guid: 20e8f1932b30ffd4c88521c8edfc9aa8, type: 3}

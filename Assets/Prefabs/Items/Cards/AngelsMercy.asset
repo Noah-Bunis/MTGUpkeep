@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Angel's Mercy
   cardName: 
-  rules: You restore 35% health
+  rules: You restore 35% health.
   flavor: "\"You pick every Angel\u2019s Mercy that passes by, jam 15 plains into
     your deck, then swiftly and majestically annihilate all hope of coming even remotely
     close to winning any of your matches, finishing the tournament 0-3 and leaving
