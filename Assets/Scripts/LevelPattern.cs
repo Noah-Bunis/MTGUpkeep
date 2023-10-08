@@ -25,7 +25,6 @@ public class LevelPattern: MonoBehaviour {
                 case 1:
                 case 2:
                 case 4:
-                case 5:
                 case 6:
                         temp.Add(enemies[(int)level]);
                         break;
@@ -40,6 +39,7 @@ public class LevelPattern: MonoBehaviour {
                         break;
                 
                 case 3: //Midlevel Boss
+                case 5:
                         temp.Add(enemies[(int)level]);
                         enemies[(int)level] = enemies[(int)level - 1];
                         break;

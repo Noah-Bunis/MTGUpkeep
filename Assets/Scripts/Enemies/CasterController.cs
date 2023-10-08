@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimController : MonoBehaviour
+public class CasterController : MonoBehaviour
 {
         [SerializeField] EnemyContainer enemy;
         [SerializeField] GameObject bulletPrefab, firePoint;
@@ -13,7 +13,7 @@ public class TimController : MonoBehaviour
 
         void Awake()
         {
-                if (GameObject.FindObjectsOfType(typeof(TimController)).Length > 1) Destroy(gameObject);
+                if (GameObject.FindObjectsOfType(typeof(CasterController)).Length > 1) Destroy(gameObject);
 
                 attackRate = enemy.damageRate;
                 timer = attackRate;
