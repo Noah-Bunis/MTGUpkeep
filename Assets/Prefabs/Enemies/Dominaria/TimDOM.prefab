@@ -134,7 +134,7 @@ MonoBehaviour:
   BASEDAMAGERATE: 1
   BASEHEALTH: 10
   BASEEXPYIELD: 30
-  speed: 0.6
+  speed: 0.45
   health: 10
   healthMax: 10
   damage: 2
@@ -246,6 +246,7 @@ MonoBehaviour:
   player: {fileID: 0}
   distanceToKeep: 1
   bulletForce: 4
+  attackLength: 2
 --- !u!1 &5876057753724287316
 GameObject:
   m_ObjectHideFlags: 0

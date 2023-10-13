@@ -216,7 +216,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 63
+    m_Bits: 319
   m_ContactCaptureLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -296,6 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
+  queuedLevels: 0
   exp: 0
   gold: 0
   expBar: {fileID: 0}

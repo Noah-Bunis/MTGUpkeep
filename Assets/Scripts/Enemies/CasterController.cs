@@ -7,7 +7,7 @@ public class CasterController : MonoBehaviour
         [SerializeField] EnemyContainer enemy;
         [SerializeField] GameObject bulletPrefab, firePoint;
         public GameObject player;
-        [SerializeField] float distanceToKeep, bulletForce;
+        [SerializeField] float distanceToKeep, bulletForce, attackLength, maxInaccuracy;
         private float attackRate;
         private float timer;
 
@@ -24,8 +24,15 @@ public class CasterController : MonoBehaviour
                 player = enemy.player;
                 KeepDistance(distanceToKeep);
                 timer -= Time.deltaTime;
-                if (timer < 0f) Attack();
-
+                if (timer < 0f) 
+                {
+                        enemy.sprite.color = Color.white;
+                        Attack();
+                }
+                else if (timer < 0.5f && timer > 0f) 
+                {
+                        enemy.sprite.color = Color.red;
+                }
                 firePoint.transform.LookAt(player.transform.position);
         }
 
@@ -36,17 +43,17 @@ public class CasterController : MonoBehaviour
                 {
                         enemy.speed = 0;
                 }
-                else enemy.speed = 0.6f;
+                else enemy.speed = enemy.BASESPEED;
         }
 
         private void Attack()
         {
                 GameObject bullet = Instantiate(bulletPrefab);
-                bullet.transform.position = firePoint.transform.position;
+                bullet.transform.position = firePoint.transform.position + new Vector3(Random.Range(-maxInaccuracy, maxInaccuracy), Random.Range(-maxInaccuracy, maxInaccuracy), 0f);
                 bullet.transform.rotation = Quaternion.LookRotation(bullet.transform.forward, player.transform.position - bullet.transform.position);
                 Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
                 rb.AddForce(firePoint.transform.forward * bulletForce, ForceMode2D.Impulse);
-                Destroy(bullet, (1 / attackRate));
+                Destroy(bullet, (attackLength));
                 timer = (1 / attackRate);
         }
 }

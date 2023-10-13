@@ -14,8 +14,8 @@ public class EnemyContainer: MonoBehaviour {
         private bool isDying = false;
 
         new Rigidbody2D rigidbody;
-        SimpleFlash flash;
-        SpriteRenderer sprite;
+        public SimpleFlash flash;
+        public SpriteRenderer sprite;
 
         
         [SerializeField] public float BASESPEED,BASEDAMAGE,BASEDAMAGERATE;

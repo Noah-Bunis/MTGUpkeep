@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 1696230884271300838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4168539054062522083}
@@ -86,16 +86,18 @@ MonoBehaviour:
   healthBar: {fileID: 6740189418037485883}
   expDrop: {fileID: 7585809110396185465, guid: 590eacef579d9074ba0d30397b6744db, type: 3}
   player: {fileID: 0}
+  flash: {fileID: 0}
+  sprite: {fileID: 0}
   BASESPEED: 0.1
   BASEDAMAGE: 2
-  BASEDAMAGERATE: 0.5
+  BASEDAMAGERATE: 0.25
   BASEHEALTH: 700
   BASEEXPYIELD: 700
   speed: 0.1
   health: 700
   healthMax: 700
   damage: 2
-  damageRate: 0.5
+  damageRate: 0.25
   maxEnemyGroup: 1
   expDropYield: 700
 --- !u!212 &6379580691675851619
@@ -214,11 +216,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 9007341081162277986}
-  bulletPrefab: {fileID: 7682542347356439099, guid: 81a474b38584c6649b67bd65242e208e, type: 3}
+  bulletPrefab: {fileID: 7682542347356439099, guid: f9c36fc0710ea59449b1ff2cd1890472, type: 3}
   firePoint: {fileID: 5876057753724287316}
   player: {fileID: 0}
   distanceToKeep: 2
-  bulletForce: 20
+  bulletForce: 30
+  attackLength: 2
+  maxInaccuracy: 0.12
 --- !u!60 &2722099570103911165
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -238,10 +242,10 @@ PolygonCollider2D:
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 255
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 255
   m_ContactCaptureLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -437,11 +441,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1838575374669039342, guid: 41d275824c6198149b29ba0f2d071ef6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -0.121
       objectReference: {fileID: 0}
     - target: {fileID: 1838575374669039342, guid: 41d275824c6198149b29ba0f2d071ef6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.2
+      value: 1.039
       objectReference: {fileID: 0}
     - target: {fileID: 1838575374669039342, guid: 41d275824c6198149b29ba0f2d071ef6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -462,6 +466,14 @@ PrefabInstance:
     - target: {fileID: 6063647076472523047, guid: 41d275824c6198149b29ba0f2d071ef6, type: 3}
       propertyPath: m_text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063647076472523047, guid: 41d275824c6198149b29ba0f2d071ef6, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063647076472523047, guid: 41d275824c6198149b29ba0f2d071ef6, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6063647076472523047, guid: 41d275824c6198149b29ba0f2d071ef6, type: 3}
       propertyPath: m_fontColorGradient.topRight.g

@@ -14,9 +14,5 @@ public class EnemyProjectile : MonoBehaviour
                         player.HealthUpdate();
                         Destroy(gameObject);
                 }
-                else if (collision.gameObject.GetComponent < EnemyContainer > ())
-                {
-                        Destroy(gameObject, 0.1f);
-                }
     }
 }

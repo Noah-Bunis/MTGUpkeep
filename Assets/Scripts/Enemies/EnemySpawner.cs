@@ -75,7 +75,6 @@ public class EnemySpawner: MonoBehaviour {
 		BossContainer boss = enemy.GetComponent<BossContainer>();
 		if (boss != null)
 		{
-			isSpawning = false;
 			boss.spawner = this;
 		}
 	}

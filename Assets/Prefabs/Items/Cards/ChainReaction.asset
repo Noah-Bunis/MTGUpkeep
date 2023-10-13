@@ -20,5 +20,5 @@ MonoBehaviour:
     captain"
   art: {fileID: 21300000, guid: f82aa43a274b3984380d9233f6d447fc, type: 3}
   item: {fileID: 1230546507736986663, guid: e21944122c622b5419392cada41c6c6b, type: 3}
-  titleColor: {r: 0, g: 0, b: 0, a: 0}
+  titleColor: {r: 0, g: 0, b: 0, a: 1}
   selectedColor: {r: 0.98039216, g: 0.6666667, b: 0.56078434, a: 1}
