@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83cf56c6558d86b429cf6060501397e0, type: 3}
+  m_Name: SparkDouble
+  m_EditorClassIdentifier: 
+  title: Spark Double
+  cardName: SparkDouble
+  rules: Summon a weaker copy of yourself
+  flavor: 
+  art: {fileID: 21300000, guid: b41d998c830772347bb2816d88769197, type: 3}
+  item: {fileID: 7914255728683625322, guid: 3aa8d2a0a70b2ce4db1740f13e8509ad, type: 3}
+  titleColor: {r: 0, g: 0, b: 0, a: 1}
+  selectedColor: {r: 0.7019608, g: 0.80784315, b: 0.91764706, a: 1}

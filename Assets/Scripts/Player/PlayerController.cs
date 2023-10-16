@@ -12,6 +12,7 @@ public class PlayerController: MonoBehaviour {
         [SerializeField] public float pickupRange;
         [SerializeField] public float damage;
         [SerializeField] public float speed;
+        [SerializeField] public bool isClone;
         public float distanceTraveled;
 
         [Header("OBJECT REFRENCES")]
@@ -29,8 +30,11 @@ public class PlayerController: MonoBehaviour {
         void FixedUpdate() {
                 if (healthBar.activeSelf) healthBar.GetComponent < HealthBar > ().SetState(health, healthMax);
 
-                if (health <= 0) {
-                        SceneManager.LoadSceneAsync(0);
+                if (health <= 0) 
+                {
+                        
+                        if (isClone) Destroy(gameObject);
+                        else SceneManager.LoadSceneAsync(0);
                 } else if (health > healthMax) {
                         health = healthMax;
                 }

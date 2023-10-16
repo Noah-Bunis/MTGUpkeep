@@ -7,7 +7,7 @@ public class CasterController : MonoBehaviour
         [SerializeField] EnemyContainer enemy;
         [SerializeField] GameObject bulletPrefab, firePoint;
         public GameObject player;
-        [SerializeField] float distanceToKeep, bulletForce, attackLength, maxInaccuracy;
+        [SerializeField] float distanceToKeep, bulletForce, attackLength, warningTime, targetTime;
         private float attackRate;
         private float timer;
 
@@ -29,11 +29,12 @@ public class CasterController : MonoBehaviour
                         enemy.sprite.color = Color.white;
                         Attack();
                 }
-                else if (timer < 0.5f && timer > 0f) 
+                else if (timer < warningTime && timer > targetTime) 
                 {
                         enemy.sprite.color = Color.red;
+                        firePoint.transform.LookAt(player.transform.position);
                 }
-                firePoint.transform.LookAt(player.transform.position);
+                
         }
 
         private void KeepDistance(float distance)
@@ -49,7 +50,7 @@ public class CasterController : MonoBehaviour
         private void Attack()
         {
                 GameObject bullet = Instantiate(bulletPrefab);
-                bullet.transform.position = firePoint.transform.position + new Vector3(Random.Range(-maxInaccuracy, maxInaccuracy), Random.Range(-maxInaccuracy, maxInaccuracy), 0f);
+                bullet.transform.position = firePoint.transform.position;
                 bullet.transform.rotation = Quaternion.LookRotation(bullet.transform.forward, player.transform.position - bullet.transform.position);
                 Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
                 rb.AddForce(firePoint.transform.forward * bulletForce, ForceMode2D.Impulse);

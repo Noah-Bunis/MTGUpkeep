@@ -129,6 +129,8 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   expDrop: {fileID: 7585809110396185465, guid: 590eacef579d9074ba0d30397b6744db, type: 3}
   player: {fileID: 0}
+  flash: {fileID: 0}
+  sprite: {fileID: 0}
   BASESPEED: 0.45
   BASEDAMAGE: 2
   BASEDAMAGERATE: 1
@@ -247,6 +249,9 @@ MonoBehaviour:
   distanceToKeep: 1
   bulletForce: 4
   attackLength: 2
+  maxInaccuracy: 0
+  warningTime: 0.3
+  targetTime: 0.1
 --- !u!1 &5876057753724287316
 GameObject:
   m_ObjectHideFlags: 0

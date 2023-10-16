@@ -91,6 +91,9 @@ public class UpgradeManager: MonoBehaviour {
                         case "LightningGreaves":
                                 UpgradePlayer("speed", 1.33f);
                                 break;
+                        case "SparkDouble":
+                                AddItem();
+                                break;
                         case "ZuranOrb":
                                 AddItem();
                                 break;
