@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Fiery Emancipation
   cardName: FieryEmancipation
-  rules: Increases critical hit damage by 150%.
+  rules: Increases critical hit damage by 50%.
   flavor: "\u201COne day the mountain\u2019s fire will rise up to burn away our chains
     and end this age of oppression.\u201D \u2014The Molten Prophecy"
   art: {fileID: 21300000, guid: 4a3c79a4b4d1dae458a7706f598632ea, type: 3}

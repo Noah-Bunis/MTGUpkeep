@@ -99,6 +99,7 @@ public class UpgradeManager: MonoBehaviour {
                                 break;
                         //Weapon Cards
                         case "BlueElementalBlast":
+                        case "Bonesplitter":
                         case "Incinerate":
                                 UpgradeWeapon();
                                 break;

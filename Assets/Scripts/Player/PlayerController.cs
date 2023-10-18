@@ -26,6 +26,7 @@ public class PlayerController: MonoBehaviour {
         void Awake() {
                 Application.targetFrameRate = Screen.currentResolution.refreshRate;
                 oldPos = transform.position;
+                if (isClone) transform.position += new Vector3(Random.Range(-0.5f,0.5f), Random.Range(-0.5f,0.5f), 0f);
         }
         void FixedUpdate() {
                 if (healthBar.activeSelf) healthBar.GetComponent < HealthBar > ().SetState(health, healthMax);

@@ -322,9 +322,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8796ffe27415b0f42bc71d049139684b, type: 2}
   - {fileID: 11400000, guid: d18f0f7478a761b4581c1d5e6fa351bf, type: 2}
   - {fileID: 11400000, guid: 74bafdbc626e11a4b9e780e9d4390c3f, type: 2}
+  - {fileID: 11400000, guid: a2713912f98d6de44a02cacf37afd422, type: 2}
   commonCards:
   - {fileID: 11400000, guid: 84ad2960576baab4ea2cfe4509fbda80, type: 2}
   - {fileID: 11400000, guid: 4f0b5f0c2a9524b4e8c62a0595bb0c55, type: 2}
+  - {fileID: 11400000, guid: a2713912f98d6de44a02cacf37afd422, type: 2}
   uncommonCards:
   - {fileID: 11400000, guid: 4f0b5f0c2a9524b4e8c62a0595bb0c55, type: 2}
   - {fileID: 11400000, guid: 2d7a05f65f8becb49aa17c6352aa9e3e, type: 2}

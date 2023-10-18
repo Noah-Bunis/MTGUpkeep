@@ -31,7 +31,7 @@ public class CasterController : MonoBehaviour
                 }
                 else if (timer < warningTime && timer > targetTime) 
                 {
-                        enemy.sprite.color = Color.red;
+                        enemy.sprite.color = Color.cyan;
                         firePoint.transform.LookAt(player.transform.position);
                 }
                 
