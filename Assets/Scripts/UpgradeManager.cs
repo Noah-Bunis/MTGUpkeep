@@ -34,21 +34,25 @@ public class UpgradeManager: MonoBehaviour {
                         switch (rarity)
                         {
                                 case int n when (n <= 50):
-                                        cardsNotDrawn.Add(commonCards[UnityEngine.Random.Range(0,commonCards.Count)]);
+                                        if (cardsNotDrawn.Add(commonCards[UnityEngine.Random.Range(0,commonCards.Count)]) == false);
+                                                cardsNotDrawn.Add(commonCards[UnityEngine.Random.Range(0,commonCards.Count)]);
                                         break;
                                 case int n when (n > 50 && n < 85):
-                                        cardsNotDrawn.Add(uncommonCards[UnityEngine.Random.Range(0,uncommonCards.Count)]);
+                                        if (cardsNotDrawn.Add(uncommonCards[UnityEngine.Random.Range(0,uncommonCards.Count)]) == false);
+                                                cardsNotDrawn.Add(commonCards[UnityEngine.Random.Range(0,commonCards.Count)]);
                                         break;
                                 case int n when (n >= 85 && n < 95):
-                                        cardsNotDrawn.Add(rareCards[UnityEngine.Random.Range(0,rareCards.Count)]);
+                                        if (cardsNotDrawn.Add(rareCards[UnityEngine.Random.Range(0,rareCards.Count)]) == false);
+                                                cardsNotDrawn.Add(uncommonCards[UnityEngine.Random.Range(0,commonCards.Count)]);
                                         break;
                                 case int n when (n >= 95):
-                                        cardsNotDrawn.Add(mythicCards[UnityEngine.Random.Range(0,mythicCards.Count)]);
+                                        if (cardsNotDrawn.Add(mythicCards[UnityEngine.Random.Range(0,mythicCards.Count)]) == false);
+                                                cardsNotDrawn.Add(mythicCards[UnityEngine.Random.Range(0,mythicCards.Count)]);
                                         break;
                         }
                 }
                 List<Card> selectedCards = new List<Card>(cardsNotDrawn);
-                for (int i = 0; i < selectedCards.Count; i++)
+                for (int i = 0; i < positions.Length; i++)
                 {
                         Card targetCard = selectedCards[i];
                         positions[i].GetComponent<CardDisplay>().card = targetCard;
