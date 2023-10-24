@@ -141,7 +141,7 @@ public class UpgradeManager: MonoBehaviour {
                                 break;
                         case "health%":
                                 attributes.health += (int)(attributes.healthMax * amount);
-                                attributes.HealthUpdate();
+                                attributes.HealthUpdate(0);
                                 break;
                         case "critRate":
                                 attributes.critRate += amount;

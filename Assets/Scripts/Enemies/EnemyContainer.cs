@@ -92,7 +92,7 @@ public class EnemyContainer: MonoBehaviour {
                 if (!isAttacking) {
                         isAttacking = true;
                         player.health -= (int) damage;
-                        player.HealthUpdate();
+                        player.HealthUpdate(damage);
                 }
                 yield return new WaitForSeconds(1 / damageRate);
                 if (isAttacking) isAttacking = false;

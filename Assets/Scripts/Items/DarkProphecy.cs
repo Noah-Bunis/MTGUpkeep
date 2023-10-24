@@ -22,7 +22,7 @@ public class DarkProphecy : MonoBehaviour
                 {
                         case int n when (n <= 15):
                         playerStats.health -= 1;
-                        playerStats.HealthUpdate();
+                        playerStats.HealthUpdate(1);
                         break;
                         case int n when (n > 15):
                         break;

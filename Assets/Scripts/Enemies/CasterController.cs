@@ -16,7 +16,7 @@ public class CasterController : MonoBehaviour
                 if (GameObject.FindObjectsOfType(typeof(CasterController)).Length > 1) Destroy(gameObject);
 
                 attackRate = enemy.damageRate;
-                timer = attackRate;
+                timer = (1 / attackRate);
         }
 
         void FixedUpdate()

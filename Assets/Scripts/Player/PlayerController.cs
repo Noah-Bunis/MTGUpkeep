@@ -18,6 +18,7 @@ public class PlayerController: MonoBehaviour {
         [Header("OBJECT REFRENCES")]
         [SerializeField] PlayerMovement movement;
         [SerializeField] GameObject healthBar;
+        private EffectManager effectManager;
 
         private bool healthUpdate = false;
         public float timer = 2;
@@ -25,6 +26,7 @@ public class PlayerController: MonoBehaviour {
 
         void Awake() {
                 Application.targetFrameRate = Screen.currentResolution.refreshRate;
+                effectManager = GameObject.Find("EffectManager").GetComponent<EffectManager>();
                 oldPos = transform.position;
                 if (isClone) transform.position += new Vector3(Random.Range(-0.5f,0.5f), Random.Range(-0.5f,0.5f), 0f);
         }
@@ -53,8 +55,12 @@ public class PlayerController: MonoBehaviour {
                 TrackDistance();
         }
 
-        public void HealthUpdate() {
+        public void HealthUpdate(float delta) {
                 healthUpdate = true;
+                if (delta > 0)
+                        {
+                                effectManager.CameraShake(0.075f, delta * 0.05f);
+                        }
         }
 
         public void TrackDistance() {

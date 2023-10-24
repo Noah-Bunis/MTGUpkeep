@@ -18,7 +18,7 @@ public class ZuranOrb : MonoBehaviour
                 if ((int)playerStats.distanceTraveled >= distanceThreshold)
                 {
                         playerStats.health += (int)(playerStats.health * 0.1f);
-                        if (playerStats.health < playerStats.healthMax) playerStats.HealthUpdate();
+                        if (playerStats.health < playerStats.healthMax) playerStats.HealthUpdate(0);
                         playerStats.distanceTraveled = 0;
                 }
         }
