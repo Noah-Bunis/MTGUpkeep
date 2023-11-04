@@ -32,6 +32,11 @@ public class Sweeper : MonoBehaviour
                 obj.GetComponent<EnemyContainer>().health -= amount;
                 obj.GetComponent<EnemyContainer>().ShowDamage((float)amount);
             }
+            else if (effectType == "destroy")
+            {
+                obj.GetComponent<EnemyContainer>().health -= obj.GetComponent<EnemyContainer>().health;
+                obj.GetComponent<EnemyContainer>().ShowDamage((float)amount);
+            }
         }
     }
 

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Chain Reaction
   cardName: ChainReaction
-  rules: Deals X damage to each creature, where X is the number of creatures.
+  rules: Deals X damage to each creature, where X is twice the number of creatures.
   flavor: "\u201CWe train for the improbable, like lightning striking the same place
     twice, or striking everywhere at once.\u201D \u2014Nundari, Sea Gate militia
     captain"

@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Dark Prophecy
   cardName: DarkProphecy
-  rules: Increases experience gain by 25%; 15% chance to take damage for gaining
-    experience.
+  rules: Increase experience gain by 25%; 15% chance to take damage for gaining experience.
   flavor: When the bog ran short on small animals, Ekri turned to the surrounding
     farmlands.
   art: {fileID: 21300000, guid: 1f29c91c1d45d334d8161e4f40f552b8, type: 3}

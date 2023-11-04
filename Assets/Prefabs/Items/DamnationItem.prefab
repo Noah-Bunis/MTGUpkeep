@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7145603095410299978}
   - component: {fileID: 1419459435301282011}
   m_Layer: 0
-  m_Name: ChainReactionItem
+  m_Name: DamnationItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   group: Enemy
-  effectType: damage
-  cardName: ChainReaction
-  amount: 2
+  effectType: destroy
+  cardName: Damnation
+  amount: 0
