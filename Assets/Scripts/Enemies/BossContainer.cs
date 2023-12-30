@@ -12,6 +12,14 @@ public class BossContainer : MonoBehaviour
         void Awake()
         {
                 if (GameObject.FindObjectsOfType(typeof(BossContainer)).Length > objectLimit) Destroy(gameObject);
+                GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+                foreach (GameObject enemy in enemies)
+                {
+                        if(enemy.GetComponent<BossContainer>() == null)
+                        {
+                                Destroy(enemy);
+                        }
+                }
         }
 
         void FixedUpdate()

@@ -83,6 +83,9 @@ public class UpgradeManager: MonoBehaviour {
                         case "ChainReaction":
                                 AddItem();
                                 break;
+                        case "Damnation":
+                                AddItem();
+                                break;
                         case "DarkProphecy":
                                 AddItem();
                                 break;

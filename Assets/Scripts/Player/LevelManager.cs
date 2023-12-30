@@ -31,7 +31,7 @@ public class LevelManager: MonoBehaviour {
 
         public int TO_LEVEL_UP {
                 get {
-                        return level * 100;
+                        return level * 20;
                 }
         }
 
